@@ -1,15 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const salesSchema = new Schema({
-  paymentMethod: String,
-  price: String,
-  name: String,
-  email: String,
-  phone: String,
-  birthdate: Date,
+const saleSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: String,
+    required: true
+  },
+  paymentMethod: {
+    type: String,
+    required: true
+  },
+  cardNum: {
+    type: String,
+    required: true
+  },
+  cvv: {
+    type: Number,
+    required: true
+  },
+  price: {
+    type: String,
+    required: true
+  },
+  birthDate: {
+    type: Date,
+    required: true
+  }
 });
 
-const Sales = mongoose.model('Sale', salesSchema);
+const newSale = mongoose.model("Sale", saleSchema);
 
-module.exports = Sales;
+module.exports = newSale;
