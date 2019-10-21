@@ -7,6 +7,7 @@ const carSchema = new Schema({
   year: String,
   price: Number,
   convertible: Boolean,
+  description: String,
 });
 
 const Car = mongoose.model('Car', carSchema);
