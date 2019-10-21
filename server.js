@@ -6,7 +6,7 @@ const db = require("./models");
 // const session = require("express-session");
 
 // Routes
-const routes = require("./routes");
+// const routes = require("./routes");
 
 // ------------------------------------------------- MIDDLEWARE ------------------------------------------------- //
 
