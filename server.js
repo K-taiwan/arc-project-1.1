@@ -6,7 +6,7 @@ const db = require("./models");
 // const session = require("express-session");
 
 // Routes
-const routes = require("./routes");
+// const routes = require("./routes");
 
 // ------------------------------------------------- MIDDLEWARE ------------------------------------------------- //
 
@@ -62,7 +62,7 @@ app.get("/checkout", (req, res) => {
 
 // DASHBOARD ROUTE
 app.get("/dashboard", (req, res) => {
-  const file = `${__dirname}/views/dashboard.html`;
+  const file = `${__dirname}/views/dashboard2.html`;
   res.sendFile(file);
 });
 
