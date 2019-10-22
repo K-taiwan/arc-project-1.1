@@ -46,9 +46,9 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //   res.sendFile(file);
 // });
 app.get('/api/v1/cars', (req, res)=> {
-  db.Cars.find({}, (err, createdNewCar) => {
+  db.Cars.find({}).populate('sales'), (err, createdNewCar) => {
     res.json(createdNewCar)
-  })
+  }
 })
 
 
