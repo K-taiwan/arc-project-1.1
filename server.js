@@ -36,7 +36,11 @@ app.use(express.static(__dirname + "/public"));
 // ----------------------------------------------- START SERVER ----------------------------------------------- //
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
+
 //Show Cars
+
+// Show cars
+
 app.get("/api/v1/cars", (req, res) => {
   const file = `${__dirname}/db/cars.json`;
   res.sendFile(file);
@@ -54,6 +58,8 @@ app.post("/api/v1/cars", (req, res) => {
     });
   });
 });
+
+
 
 // HOME PAGE ROUTE
 app.get("/", (req, res) => {
