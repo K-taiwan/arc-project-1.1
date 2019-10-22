@@ -36,6 +36,25 @@ app.use(express.static(__dirname + "/public"));
 // ----------------------------------------------- START SERVER ----------------------------------------------- //
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
+//Show Cars
+app.get("/api/v1/cars", (req, res) => {
+  const file = `${__dirname}/db/cars.json`;
+  res.sendFile(file);
+});
+
+//Create Cars
+app.post("/api/v1/cars", (req, res) => {
+  db.Cars.create(req.body, (error, createdNewCar) => {
+    if (error) return console.log(error);
+    res.json({
+      status: 201,
+      message: "Create new car",
+      requestedAt: new Date().toLocaleString(),
+      data: createdNewCar
+    });
+  });
+});
+
 // HOME PAGE ROUTE
 app.get("/", (req, res) => {
   const file = `${__dirname}/views/home.html`;
