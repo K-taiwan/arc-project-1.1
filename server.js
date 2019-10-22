@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const bodyParser = require("body-parser");
-const db = require("./models");
+const db = require("./models/Index");
 // const session = require("express-session");
 
 // Routes
@@ -33,8 +33,6 @@ app.use(express.static(__dirname + "/public"));
 // API Routes
 // app.use("/api/v1", routes.api);
 
-// ----------------------------------------------- START SERVER ----------------------------------------------- //
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 
 //Show Cars
@@ -45,12 +43,29 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
 // });
+<<<<<<< HEAD
 
 app.get('/api/v1/cars', (req, res) => {
   db.Cars.find({}, (err, foundCar)=> {
     res.json(foundCar)
   })
 })
+=======
+app.get("/api/v1/cars", (req, res) => {
+  db.Cars.find({}, (error, allCars) => {
+    if (error) return console.log(error);
+    res.json({
+      status: 200,
+      msg: "Show all sales",
+      requestedAt: new Date().toLocaleString(),
+      count: allCars.length,
+      data: allCars
+    });
+  });
+});
+>>>>>>> 92f3879dfb62a6c2a9eef0ff25917891f171a2c9
+
+
 
 //Create Cars
 app.post("/api/v1/cars", (req, res) => {
@@ -64,8 +79,6 @@ app.post("/api/v1/cars", (req, res) => {
     });
   });
 });
-
-
 
 // HOME PAGE ROUTE
 app.get("/", (req, res) => {
@@ -93,7 +106,7 @@ app.get("/checkout", (req, res) => {
 
 // DASHBOARD ROUTE
 app.get("/dashboard", (req, res) => {
-  const file = `${__dirname}/views/dashboard2.html`;
+  const file = `${__dirname}/views/dashboard.html`;
   res.sendFile(file);
 });
 
@@ -150,3 +163,6 @@ app.post("/api/v1/sales", (req, res) => {
 // });
 
 // TRYING HARD
+
+// ----------------------------------------------- START SERVER ----------------------------------------------- //
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
