@@ -43,14 +43,8 @@ app.use(express.static(__dirname + "/public"));
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
 // });
-<<<<<<< HEAD
 
-app.get('/api/v1/cars', (req, res) => {
-  db.Cars.find({}, (err, foundCar)=> {
-    res.json(foundCar)
-  })
-})
-=======
+
 app.get("/api/v1/cars", (req, res) => {
   db.Cars.find({}, (error, allCars) => {
     if (error) return console.log(error);
@@ -63,7 +57,6 @@ app.get("/api/v1/cars", (req, res) => {
     });
   });
 });
->>>>>>> 92f3879dfb62a6c2a9eef0ff25917891f171a2c9
 
 
 
@@ -81,33 +74,58 @@ app.post("/api/v1/cars", (req, res) => {
 });
 
 // HOME PAGE ROUTE
-app.get("/", (req, res) => {
-  const file = `${__dirname}/views/home.html`;
-  res.sendFile(file);
+// app.get("/", (req, res) => {
+//   const file = `${__dirname}/views/home.html`;
+//   res.sendFile(file);
+// });
+app.get('/', (req, res) => {
+  res.sendFile('views/home.html', {
+      root: __dirname
+  });
 });
 
 // GALLERY ROUTE
-app.get("/gallery", (req, res) => {
-  const file = `${__dirname}/views/gallery.html`;
-  res.sendFile(file);
+// app.get("/gallery", (req, res) => {
+//   const file = `${__dirname}/views/gallery.html`;
+//   res.sendFile(file);
+// });
+app.get('/gallery', (req, res) => {
+  res.sendFile('views/gallery.html', {
+      root: __dirname
+  });
 });
 
 // SINGLE CAR ROUTE
-app.get("/gallery/:carId", (req, res) => {
-  const file = `${__dirname}/views/singlecar.html`;
-  res.sendFile(file);
+// app.get("/gallery/:carId", (req, res) => {
+//   const file = `${__dirname}/views/singlecar.html`;
+//   res.sendFile(file);
+// });
+app.get('/gallery/:carId', (req, res) => {
+  res.sendFile('/views/singlecar.html', {
+      root: __dirname
+  });
 });
 
 // CHECKOUT ROUTE
-app.get("/checkout", (req, res) => {
-  const file = `${__dirname}/views/checkout.html`;
-  res.sendFile(file);
+// app.get("/checkout", (req, res) => {
+//   const file = `${__dirname}/views/checkout.html`;
+//   res.sendFile(file);
+// });
+app.get('/checkout', (req, res) => {
+  res.sendFile('/views/checkout.html', {
+      root: __dirname
+  });
 });
 
 // DASHBOARD ROUTE
-app.get("/dashboard", (req, res) => {
-  const file = `${__dirname}/views/dashboard.html`;
-  res.sendFile(file);
+// app.get("/dashboard", (req, res) => {
+//   const file = `${__dirname}/views/dashboard.html`;
+//   res.sendFile(file);
+// });
+app.get('/dashboard', (req, res) => {
+  res.sendFile('/views/dashboard.html', {
+      root: __dirname
+  });
 });
 
 //SALES API ROUTES------------------------------------------------------
