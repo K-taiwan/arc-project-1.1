@@ -41,10 +41,16 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // Show cars
 
-app.get("/api/v1/cars", (req, res) => {
-  const file = `${__dirname}/db/cars.json`;
-  res.sendFile(file);
-});
+// app.get("/api/v1/cars", (req, res) => {
+//   const file = `${__dirname}/db/cars.json`;
+//   res.sendFile(file);
+// });
+
+app.get('/api/v1/cars', (req, res) => {
+  db.Cars.find({}, (err, foundCar)=> {
+    res.json(foundCar)
+  })
+})
 
 //Create Cars
 app.post("/api/v1/cars", (req, res) => {
