@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display|Permanent+Marker|Satisfy|Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS File -->
     <link rel="stylesheet" href="/css/home.css" />
     <!-- JS File -->
@@ -90,32 +95,35 @@
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
+      <div class="container-one navbar-dark">
+        <a
+          href="http://localhost:4000"
+          class="navbar-brand d-flex align-items-center"
+          ><strong class="arc">ARC</strong></a
+        >
+        <div class="container-two">
           <a
-            href="http://localhost:4000"
-            class="navbar-brand d-flex align-items-center"
-            ><strong>ARC</strong></a
-          >
-          <a class="navbar-brand" href="http://localhost:4000/gallery"
+            class="navbar-item  d-flex align-items-center"
+            href="http://localhost:4000/gallery"
             >Gallery</a
           >
-          <a class="navbar-brand" href="http://localhost:4000/dashboard"
+          <a
+            class="navbar-item  d-flex align-items-center"
+            href="http://localhost:4000/dashboard"
             >Admin</a
           >
-
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarHeader"
-            aria-controls="navbarHeader"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarHeader"
+          aria-controls="navbarHeader"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </header>
     <main>
@@ -125,7 +133,7 @@
             ARC, the best. Ever.
           </h1>
           <p class="slogan lead font-weight-normal">
-            You are renting with us
+            You are renting with us again
           </p>
           <a class="btn btn-secondary" href="http://localhost:4000/gallery"
             >Go to gallery</a
@@ -133,12 +141,12 @@
         </div>
       </div>
       <!-- <hr class="featurette-divider" /> -->
-      <div class="row featurette">
+      <div class="featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">
-            Porsche.
-            <span class="car-slogan">Timeless machine.</span>
-          </h2>
+          <div class="featurette-heading">
+            <h1 class="porsche">Porsche</h1>
+            <h2><span class="car-slogan">Power, beauty and soul</span></h2>
+          </div>
           <p class="lead">
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
             ligula porta felis euismod semper. Praesent commodo cursus magna,
@@ -156,12 +164,12 @@
           </a>
         </div>
       </div>
-      <div class="row featurette">
+      <div class="featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">
-            Mustang.
-            <span class="car-slogan">Courage changes everything.</span>
-          </h2>
+          <div class="featurette-heading">
+            <h1 class="mustang">Mustang</h1>
+            <h2><span class="car-slogan">Courage changes everything</span></h2>
+          </div>
           <p class="lead">
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
             ligula porta felis euismod semper. Praesent commodo cursus magna,
@@ -179,12 +187,14 @@
           </a>
         </div>
       </div>
-      <div class="row featurette">
+      <div class="featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">
-            BMW.
-            <span class="car-slogan">The ultimate driving machine.</span>
-          </h2>
+          <div class="featurette-heading">
+            <h1 class="bmw">BMW</h1>
+            <h2>
+              <span class="car-slogan">Sheer Driving Pleasure</span>
+            </h2>
+          </div>
           <p class="lead">
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
             ligula porta felis euismod semper. Praesent commodo cursus magna,
@@ -202,12 +212,12 @@
           </a>
         </div>
       </div>
-      <div class="row featurette">
+      <div class="featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">
-            Dodge.
-            <span class="car-slogan">Where your dreams come true</span>
-          </h2>
+          <div class="featurette-heading">
+            <h1 class="dodge">Dodge</h1>
+            <h2><span class="car-slogan">Grab Life By The Horns</span></h2>
+          </div>
           <p class="lead">
             Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
             ligula porta felis euismod semper. Praesent commodo cursus magna,
