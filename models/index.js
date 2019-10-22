@@ -12,6 +12,6 @@ mongoose
   .catch(err => console.log(err));
 
 module.exports = {
-  Cars: require("./car"),
-  Sales: require("./sales")
+  Cars: require("./Car"),
+  Sales: require("./Sales")
 };

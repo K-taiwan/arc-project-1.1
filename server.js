@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4000;
 const bodyParser = require("body-parser");
-const db = require("./models");
+const db = require("./models/Index");
 // const session = require("express-session");
 
 // Routes
@@ -33,8 +33,7 @@ app.use(express.static(__dirname + "/public"));
 // API Routes
 // app.use("/api/v1", routes.api);
 
-// ----------------------------------------------- START SERVER ----------------------------------------------- //
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
 
 
 //Show Cars
@@ -45,11 +44,19 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
 // });
-app.get('/api/v1/cars', (req, res)=> {
-  db.Cars.find({}).populate('sales'), (err, createdNewCar) => {
-    res.json(createdNewCar)
-  }
-})
+app.get("/api/v1/cars", (req, res) => {
+  db.Cars.find({}, (error, allCars) => {
+    if (error) return console.log(error);
+    res.json({
+      status: 200,
+      msg: "Show all sales",
+      requestedAt: new Date().toLocaleString(),
+      count: allCars.length,
+      data: allCars
+    });
+  });
+});
+
 
 
 //Create Cars
@@ -150,3 +157,6 @@ app.post("/api/v1/sales", (req, res) => {
 // });
 
 // TRYING HARD
+
+// ----------------------------------------------- START SERVER ----------------------------------------------- //
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
