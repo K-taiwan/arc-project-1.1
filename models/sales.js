@@ -36,6 +36,6 @@ const saleSchema = new Schema({
   }
 });
 
-const newSale = mongoose.model("Sale", saleSchema);
+const newSale = mongoose.model("Sales", saleSchema);
 
 module.exports = newSale;
