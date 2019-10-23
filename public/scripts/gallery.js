@@ -83,7 +83,7 @@ const getGallerySuccess = (cars) => {
   const getGallery = () => {
     $.ajax({
       method: 'GET',
-      url: '/api/v1/gallery',
+      url: '/gallery',
       success: getGallerySuccess,
       error: handleError,
     });

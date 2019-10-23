@@ -4,12 +4,12 @@ onSuccess = response => {
   response.data.forEach(newSale => {
     const template = `
       <tr>
-      <td>${newSale.firstname}</td>
+      <td>${newSale.firstName}</td>
       <td>${newSale.lastName}</td>
       <td>${newSale.email}</td>
       </tr>
       `;
-    $("#dashboard").append(template);
+    $("tbody").append(template);
   });
 };
 

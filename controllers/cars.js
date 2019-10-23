@@ -27,7 +27,7 @@ const create = (req, res) => {
 const update = (req,res) => {
   db.Car.findById(req.params.id, function(err, carUpdate) {
     if (!carUpdate)
-      res.status(404).send("data is not found!");
+      res.status(404).send("Something went wrong, Please try again!");
     else {
       carUpdate.model = req.body.model;
       carUpdate.brand = req.body.brand;
@@ -38,10 +38,10 @@ const update = (req,res) => {
       carUpdate.description = req.body.description;
 
       carUpdate.save().then( car => {
-        res.json('Update complete!');
+        res.json('Success, Update complete!');
       })
       .catch(err => {
-        res.status(400).send("unable to update the DB!");
+        res.status(400).send("Something went wrong, Please try again!");
       })
     }
   })
@@ -63,8 +63,8 @@ const show = (req, res) => {
 
 // Index Profiles
 const index = (req, res) => {
-    db.Car.find({}, (error, allCars) => {
-      if (error) return console.log(error);
+    db.Car.find({}, (err, allCars) => {
+      if (err) return console.log(err);
       res.json({
         status: 500,
         msg: "Show all Cars",
