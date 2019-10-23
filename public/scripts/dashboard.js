@@ -4,12 +4,13 @@ onSuccess = response => {
   response.data.forEach(newSale => {
     const template = `
       <tr>
-      <td>${newSale.firstname}</td>
+      <button>Delete</button>
+      <td>${newSale.firstName}</td>
       <td>${newSale.lastName}</td>
       <td>${newSale.email}</td>
       </tr>
       `;
-    $("#dashboard").append(template);
+    $("tbody").append(template);
   });
 };
 
@@ -22,4 +23,8 @@ $.ajax({
   url: "http://localhost:4000/api/v1/sales",
   success: onSuccess,
   error: onError
+});
+
+$("button").click(function() {
+  event.preventDefault();
 });
