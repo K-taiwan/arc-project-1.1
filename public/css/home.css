@@ -1,0 +1,96 @@
+.first-section {
+  background-image: url("http://hdqwalls.com/wallpapers/long-alone-dark-road-sunset-view-z7.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* opacity: 0.8; */
+  /* background-position: center; */
+  min-height: 30em;
+  color: white;
+  width: 100%;
+}
+
+.container-one {
+  display: flex;
+  justify-content: space-evenly;
+  background: rgb(0, 24, 53);
+}
+
+.container-two {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* margin-top: 30px; */
+}
+
+.arc {
+  font-family: "Major Mono Display", monospace;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.arc:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s, opacity 0.5s;
+  text-decoration: underline;
+}
+
+.navbar-item {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 0 25px;
+}
+.navbar-item:hover {
+  text-decoration: underline;
+  color: white;
+}
+.slogan {
+  color: white;
+  font-weight: bold;
+  font-family: "Kalam", cursive;
+}
+
+.featurette {
+  padding: 60px;
+  background: rgb(0, 24, 53);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-7 {
+  color: white;
+}
+
+.car-slogan {
+  color: rgb(226, 210, 180);
+  /* font-family: "Satisfy", cursive; */
+}
+
+.car-image {
+  max-width: 500px;
+  border-radius: 30px;
+}
+.car-image:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.7s, opacity 0.5s;
+  font-size: 35px;
+}
+
+.porsche {
+  font-family: "Satisfy", cursive;
+}
+
+.mustang {
+  font-family: "Source Code Pro", monospace;
+}
+
+.bmw {
+  font-family: "Kalam", cursive;
+}
+
+.dodge {
+  font-family: "Permanent Marker", cursive;
+}

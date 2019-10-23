@@ -1,0 +1,154 @@
+
+[
+  {
+    "model": "E350",
+    "brand": "Mercedes",
+    "year": 2011,
+    "price": 60,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/JKVCgO-zQaWRs3zh69Gpow.1440x700.jpg",
+    "convertible": false,
+    "description": "22 MPG, Gas (Premium), 4 seats, automatic transmission, gps"
+  },
+  {
+    "model": "Model X",
+    "brand": "Tesla",
+    "year": 2018,
+    "price": 142,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/rsGGJfUHSNGBMmwl4xMoUw.1440x700.jpg",
+    "convertible": false,
+    "description": "Electric, LTE internet browsing, 7 seats, Falcon Doors, Free Super Charging"
+  },
+  {
+    "model": "M5",
+    "brand": "BMW",
+    "year": 2013,
+    "price": 151,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/LD6DNpTiSCeCYjFL8RIugg.1440x700.jpg",
+    "convertible": false,
+    "description": "17 MPG, Gas (Premium), 5 seats, Bluetooth, Bang & Olufsen premium surround sound stereo, Heated seats and steering wheel"
+  },
+  {
+    "model": "Cooper Roadster",
+    "brand": "MINI",
+    "year": 2013,
+    "price": 58,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/F_rek2qSSla2YQ4fiYHJfg.1440x700.jpg",
+    "convertible": true,
+    "description": "31 MPG, Gas (Premium), 2 seats, Bluetooth, Automatic Transmission, Toll pass"
+  },
+  {
+    "model": "Challenger",
+    "brand": "Dodge",
+    "year": 2018,
+    "price": 54,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/Qmr0eeFMTb21x-VjQOX-_w.1440x700.jpg",
+    "convertible": false,
+    "description": "24 MPG, Gas (Regular), 4 seats, Bluetooth, Automatic Transmission, Harman Kardon 18-Speakers audio system"
+  },
+  {
+    "model": "Mustang",
+    "brand": "Ford",
+    "year": 2018,
+    "price": 76,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/Jhd3ouvqTKiIYQvcLgBgAA.1440x700.jpg",
+    "convertible": true,
+    "description": "26 MPG, Gas (Premium), 4 seats, Bluetooth, Automatic Transmission, Keyless Entry and Start"
+  },
+  {
+    "model": "F-150",
+    "brand": "Ford",
+    "year": 2013,
+    "price": 51,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/F7W4Xe_bS-mmYMixTMl5wQ.1440x700.jpg",
+    "convertible": false,
+    "description": "20 MPG, Gas (Regular), 6 seats, Bluetooth, Automatic Transmission, 5500 lb towing capacity"
+  },
+  {
+    "model": "i8",
+    "brand": "BMW",
+    "year": 2014,
+    "price": 269,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/r4yfiLriRF-9fzgYQRnmLQ.1440x700.jpg",
+    "convertible": false,
+    "description": "54 MPG, Hybrid (Premium), 4 seats, Bluetooth, Automatic Transmission, 0-60 MPH in under 4 seconds!"
+  },
+  {
+    "model": "Slingshot",
+    "brand": "Polaris",
+    "year": 2017,
+    "price": 96,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/7krbaYGRQ1S2ZqlsSRIQxQ.1440x700.jpg",
+    "convertible": true,
+    "description": "20 MPG, Gas (Premium), 2 seats, Manual Transmission,"
+  },
+  {
+    "model": "Niro Plug-In Hybrid",
+    "brand": "Kia",
+    "year": 2019,
+    "price": 49,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/iK5FV92iRGybs7VrNk6kWA.1440x700.jpg",
+    "convertible": false,
+    "description": "50 MPG, Hybrid (Regular), 5 seats, Automatic Transmission,"
+  },
+  {
+    "model": "Corvette",
+    "brand": "Chevrolet",
+    "year": 2015,
+    "price": 116,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/EYNtxot0SoGHh4_1d3NZMQ.1440x700.jpg",
+    "convertible": true,
+    "description": "23 MPG, Gas (Premium), 2 seats, Automatic Transmission, 455HP & 460TQ @ 6000 RPM"
+  },
+  {
+    "model": "Range Rover",
+    "brand": "Land Rover",
+    "year": 2015,
+    "price": 122,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/gpTPhFfeTlGhrp8Ihic3Qw.1440x700.jpg",
+    "convertible": false,
+    "description": "20 MPG, Gas (Premium), 5 seats, Automatic Transmission, AWD Supercharged 3.0, 4x4"
+  },
+  {
+    "model": "Fosca, Beetle",
+    "brand": "Volkswagen",
+    "year": 1972,
+    "price": 200,
+    "image": "https://i.pinimg.com/originals/cb/5d/b7/cb5db7b8881408d2a02a278a00839aed.jpg",
+    "convertible": false,
+    "description": "15 MPG, Gas (Premium), 2 seats, Manual Transmission, Rauh Welt modified"
+  },{
+    "model": "Camaro",
+    "brand": "Chevrolet",
+    "year": 2018,
+    "price": 73,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/JnomWD7KSPaNss79plAGHw.1440x700.jpg",
+    "convertible": true,
+    "description": "26 MPG, Gas (Premium), 4 seats, Automatic Transmission, Toll Pass"
+  },{
+    "model": "428i",
+    "brand": "BMW",
+    "year": 2015,
+    "price": 79,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/yKoGjuTeQbCpHnTKOGM1Ow.1440x700.jpg",
+    "convertible": true,
+    "description": "28 MPG, Gas (Premium), 4 seats, Automatic Transmission, M Package, Harman-Kardon premium Audio, GPS"
+  },{
+    "model": "Boxster",
+    "brand": "Porsche",
+    "year": 2013,
+    "price": 119,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/FPdMjWpsQimSZoU7NIFD-A.1440x700.jpg",
+    "convertible": true,
+    "description": "26 MPG, Gas (Premium), 2 seats, Automatic Transmission, Sport Chrono, PASM, Torque Vectoring, and Carbon Ceramic Brakes, 315hp 3.4L flat6 naturally aspirated Engine, 7 Speed PDK Automatic Transmission"
+  },{
+    "model": "F-Type V8 S",
+    "brand": "Jaguar",
+    "year": 2014,
+    "price": 162,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/j-nhxJskRuuSAukwEPEGnQ.1440x700.jpg",
+    "convertible": true,
+    "description": "20 MPG, Gas (Premium), 4 seats, Automatic Transmission, 495hp 5.0L supercharged V8 Engine, Active Exhaust button pressed, 8 Speed ZF QuickShift Automatic Transmission, 770W Meridian Premium Audio 12 Speaker System"
+  }
+
+
+]
