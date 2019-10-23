@@ -211,16 +211,16 @@ $("#cc-cvv").blur(function() {
     $("#cc-cvv").removeClass("is-invalid");
   }
 
-  for (let i = 0; i < alphabet.length; i++) {
-    if (
-      $("#cc-cvv")
-        .val()
-        .includes(alphabet[i]) === true
-    ) {
-      $("#cc-cvv").addClass("is-invalid");
-      valid = true;
-    }
-  }
+  // for (let i = 0; i < alphabet.length; i++) {
+  //   if (
+  //     $("#cc-cvv")
+  //       .val()
+  //       .includes(alphabet[i]) === true
+  //   ) {
+  //     $("#cc-cvv").addClass("is-invalid");
+  //     valid = true;
+  //   }
+  // }
 
   for (let i = 0; i < iChars.length; i++) {
     if (
@@ -251,6 +251,19 @@ const sendNewSale = () => {
       firstName: $("#firstName").val(),
       lastName: $("#lastName").val(),
       email: $("#email").val()
+      // birthDate: $("#birth-date").val(),
+      // phone: $("#phone").val(),
+      // address: $("#address").val(),
+      // country: $("#country").val(),
+      // state: $("#state").val(),
+      // zip: $("#zip").val(),
+      // paymentMethod: "Dont't know how",
+      // nameOnCard: $("#cc-name").val(),
+      // cardNum: $("#cc-number").val(),
+      // expDate: $("#cc-expiration").val(),
+      // cvv: $("#cc-ccv").val(),
+      // carId: "carId",
+      // price: "don't know either"
     },
     success: onSuccess,
     error: onError
