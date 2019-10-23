@@ -33,8 +33,6 @@ app.use(express.static(__dirname + "/public"));
 // API Routes
 // app.use("/api/v1", routes.api);
 
-
-
 //Show Cars
 
 // Show cars
@@ -43,12 +41,14 @@ app.use(express.static(__dirname + "/public"));
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
 // });
+
+// API CAR ROUTES-----------------------------------------------------------------------
 app.get("/api/v1/cars", (req, res) => {
   db.Cars.find({}, (error, allCars) => {
     if (error) return console.log(error);
     res.json({
       status: 200,
-      msg: "Show all sales",
+      msg: "Show all cars",
       requestedAt: new Date().toLocaleString(),
       count: allCars.length,
       data: allCars
@@ -56,9 +56,7 @@ app.get("/api/v1/cars", (req, res) => {
   });
 });
 
-
-
-//Create Cars
+//Create Car
 app.post("/api/v1/cars", (req, res) => {
   db.Cars.create(req.body, (error, createdNewCar) => {
     if (error) return console.log(error);
@@ -67,6 +65,33 @@ app.post("/api/v1/cars", (req, res) => {
       message: "Create new car",
       requestedAt: new Date().toLocaleString(),
       data: createdNewCar
+    });
+  });
+});
+
+// API SALE ROUTE------------------------------------------------------------------
+app.get("/api/v1/sales", (req, res) => {
+  db.Cars.find({}, (error, allSales) => {
+    if (error) return console.log(error);
+    res.json({
+      status: 200,
+      msg: "Show all sales",
+      requestedAt: new Date().toLocaleString(),
+      count: allSales.length,
+      data: allSales
+    });
+  });
+});
+
+// New Sale
+app.post("/api/v1/sales", (req, res) => {
+  db.Cars.create(req.body, (error, newSale) => {
+    if (error) return console.log(error);
+    res.json({
+      status: 201,
+      message: "New sale",
+      requestedAt: new Date().toLocaleString(),
+      data: newSale
     });
   });
 });
