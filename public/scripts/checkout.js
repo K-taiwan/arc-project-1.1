@@ -29,36 +29,9 @@ let iChars = [
   "!"
 ];
 
-let alphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z"
-];
-
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let newSale = [];
 
 // FORM VALIDATION-----------------------------------------------------------------
 // FIRST NAME----------------------------------------------------------------------
@@ -121,6 +94,16 @@ $("#lastName").blur(function() {
     }
   }
 });
+// BIRTH DATE
+
+$("#birth-date").blur(function() {
+  if ($("#birth-date").val().length < 1) {
+    $("#birth-date").addClass("is-invalid");
+    // valid = false;
+  } else {
+    $("#birth-date").removeClass("is-invalid");
+  }
+});
 
 // EMAIL---------------------------------------------------------------------------
 $("#email").blur(function() {
@@ -154,26 +137,6 @@ $("#phone").blur(function() {
     // valid = false;
   } else {
     $("#phone").removeClass("is-invalid");
-  }
-
-  for (let i = 0; i < iChars.length; i++) {
-    if (
-      $("#phone")
-        .val()
-        .includes(iChars[i]) === true
-    ) {
-      $("#phone").addClass("is-invalid");
-    }
-  }
-  for (let i = 0; i < alphabet.length; i++) {
-    if (
-      $("#phone")
-        .val()
-        .includes(alphabet[i]) === true
-    ) {
-      $("#phone").addClass("is-invalid");
-      valid = true;
-    }
   }
 });
 
@@ -218,14 +181,104 @@ $("#cc-number").blur(function() {
     $("#cc-number").removeClass("is-invalid");
   }
 
-  for (let i = 0; i < alphabet.length; i++) {
+  for (let i = 0; i < iChars.length; i++) {
     if (
       $("#cc-number")
         .val()
-        .includes(alphabet[i]) === true
+        .includes(iChars[i]) === true
     ) {
       $("#cc-number").addClass("is-invalid");
+    }
+  }
+});
+
+// EXPIRATION DATE------------------------------------------------------------------
+$("#cc-expiration").blur(function() {
+  if ($("#cc-expiration").val().length < 1) {
+    $("#cc-expiration").addClass("is-invalid");
+    // valid = false;
+    return;
+  } else {
+    $("#cc-expiration").removeClass("is-invalid");
+  }
+});
+
+// CARD CVV----------------------------------------------------------------------
+$("#cc-cvv").blur(function() {
+  if ($("#cc-cvv").val().length < 3 || $("#cc-cvv").val().length > 3) {
+    $("#cc-cvv").addClass("is-invalid");
+    // valid = false;
+    return;
+  } else {
+    $("#cc-cvv").removeClass("is-invalid");
+  }
+
+  for (let i = 0; i < alphabet.length; i++) {
+    if (
+      $("#cc-cvv")
+        .val()
+        .includes(alphabet[i]) === true
+    ) {
+      $("#cc-cvv").addClass("is-invalid");
       valid = true;
     }
   }
+
+  for (let i = 0; i < iChars.length; i++) {
+    if (
+      $("#cc-cvv")
+        .val()
+        .includes(iChars[i]) === true
+    ) {
+      $("#cc-cvv").addClass("is-invalid");
+    }
+  }
+});
+
+const onSuccess = () => {
+  console.log("success");
+  //   onSuccess load to success page
+};
+
+const onError = () => {
+  console.log("error");
+};
+
+const sendNewSale = () => {
+  // event.preventDefault();
+  $.ajax({
+    method: "POST",
+    url: "http://localhost:4000/api/v1/sales",
+    data: {
+      firstName: $("#firstName").val(),
+      lastName: $("#lastName").val(),
+      email: $("#email").val()
+    },
+    success: onSuccess,
+    error: onError
+  });
+};
+
+const validate = () => {
+  console.log($("#firstName").val());
+  sendNewSale();
+};
+
+// $("#confirm").on("click", () => {
+//   event.preventDefault();
+//   console.log("clicked");
+//   if ($(".form-control").hasClass("is-invalid") == false) {
+//   }
+//   else {sendNewSale()}
+// });
+
+// $("#confirm").on("click", () => {
+//   event.preventDefault();
+//   console.log("clicked");
+//   sendNewSale();
+// });
+
+$("#confirm").click(function() {
+  event.preventDefault();
+  validate();
 });

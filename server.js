@@ -33,8 +33,6 @@ app.use("/", routes.views);
 // API Routes
 app.use("/api/v1", routes.api);
 
-
-
 //Show Cars
 
 // Show cars
@@ -42,78 +40,6 @@ app.use("/api/v1", routes.api);
 // app.get("/api/v1/cars", (req, res) => {
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
-// });
- ///////////////---------
-
-// app.get("/api/v1/cars", (req, res) => {
-//   db.Cars.find({}, (error, allCars) => {
-//     if (error) return console.log(error);
-//     res.json({
-//       status: 200,
-//       msg: "Show all sales",
-//       requestedAt: new Date().toLocaleString(),
-//       count: allCars.length,
-//       data: allCars
-//     });
-//   });
-// });
-
-
-
-// //Create Cars
-// app.post("/api/v1/cars", (req, res) => {
-//   db.Cars.create(req.body, (error, createdNewCar) => {
-//     if (error) return console.log(error);
-//     res.json({
-//       status: 201,
-//       message: "Create new car",
-//       requestedAt: new Date().toLocaleString(),
-//       data: createdNewCar
-//     });
-//   });
-// });
-
-
-// //SALES API ROUTES------------------------------------------------------
-
-// // SHOW ALL SALES
-// app.get("/api/v1/sales", (req, res) => {
-//   db.Sales.find({}, (error, allSales) => {
-//     if (error) return console.log(error);
-//     res.json({
-//       status: 200,
-//       msg: "Show all sales",
-//       requestedAt: new Date().toLocaleString(),
-//       count: allSales.length,
-//       data: allSales
-//     });
-//   });
-// });
-
-// // SHOW SINGLE SALE
-// app.get("/api/v1/sales/:id", (req, res) => {
-//   db.Sales.findOne({ id: req.params.id }, (error, foundSale) => {
-//     if (error) return console.log(error);
-//     res.json({
-//       status: 200,
-//       message: "Show a single sale",
-//       requestedAt: new Date().toLocaleString(),
-//       data: foundSale
-//     });
-//   });
-// });
-
-// // CREATE NEW SALE
-// app.post("/api/v1/sales", (req, res) => {
-//   db.Sales.create(req.body, (error, createdSale) => {
-//     if (error) return console.log(error);
-//     res.json({
-//       status: 201,
-//       message: "Create new sale",
-//       requestedAt: new Date().toLocaleString(),
-//       data: createdSale
-//     });
-//   });
 // });
 
 // // update

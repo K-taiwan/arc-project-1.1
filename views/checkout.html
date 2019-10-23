@@ -9,6 +9,13 @@
       href="https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display|Permanent+Marker|Satisfy|Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
+    <!-- JQUERY -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS FILE -->
     <link rel="stylesheet" href="../css/checkout.css" />
     <!-- JS FILE -->
@@ -197,7 +204,7 @@
           </form>
         </div>
         <div class="col-md-8 order-md-1">
-          <h4 class="your-checkout mb-3">Your information</h4>
+          <h4 class="your-checkout text-muted mb-3">Your information</h4>
           <form class="needs-validation" novalidate="">
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -232,10 +239,10 @@
             <div class="mb-3">
               <label for="zip">Birth Date</label>
               <input
-                type="text"
+                type="date"
                 class="form-control"
-                placeholder="MM/DD/YYYY"
-                required=""
+                id="birth-date"
+                placeholder="MMDDYYYY"
               />
               <div class="invalid-feedback">
                 Please insert a valid birth date.
@@ -257,7 +264,7 @@
             <div class="mb-3">
               <label for="phone">Phone</label>
               <input
-                type="phone"
+                type="number"
                 class="form-control"
                 id="phone"
                 placeholder="ex: 555-555-5555"
@@ -268,14 +275,16 @@
             </div>
 
             <div class="mb-3">
-              <label for="address">Address</label>
+              <label id="address" for="address">Address</label>
               <input
                 type="text"
                 class="form-control"
                 id="address"
                 placeholder="1234 Main St"
-                required=""
               />
+              <div class="invalid-feedback">
+                Valid credit card number is required
+              </div>
             </div>
 
             <div class="row">
@@ -302,7 +311,8 @@
                 </select>
               </div>
               <div class="col-md-3 mb-3">
-                <label for="zip">Zip</label>
+                <label for="zip">Zip</label
+                ><span class="text-muted">(Optional)</span>
                 <input
                   type="text"
                   class="form-control"
@@ -310,14 +320,11 @@
                   placeholder=""
                   required=""
                 />
-                <div class="invalid-feedback">
-                  Valid zip code required.
-                </div>
               </div>
             </div>
             <hr class="mb-4" />
 
-            <h4 class="mb-3">Payment Method</h4>
+            <h4 class="your-checkout text-muted mb-3">Payment Method</h4>
 
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
@@ -386,13 +393,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3 mb-3">
+              <div class="col-md-9">
                 <label for="cc-expiration">Expiration Date</label>
                 <input
-                  type="text"
+                  type="date"
                   class="form-control"
                   id="cc-expiration"
-                  placeholder="MM/YY"
+                  placeholder="MMYY"
                   required=""
                 />
                 <div class="invalid-feedback">
@@ -414,7 +421,11 @@
               </div>
             </div>
             <hr class="mb-4" />
-            <button class="btn btn-success btn-lg btn-block" type="submit">
+            <button
+              id="confirm"
+              class="btn btn-success btn-lg btn-block"
+              type="submit"
+            >
               Confirm
             </button>
           </form>
@@ -422,7 +433,7 @@
       </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2019 <span class="arc-checkout"> ARC</span></p>
+        <p class="mb-1">© 2019 <span class="arc-checkout">ARC</span></p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
