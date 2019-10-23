@@ -1,11 +1,32 @@
 const express = require("express");
-const bodyParser = require("body-parser");
+const router = express.Router();
+const ctrl = require('../controllers')
+// const bodyParser = require("body-parser");
 // internal modules
-const db = require("./models");
-const routes = require("./routes");
+// const db = require("./models");
+// const routes = require("./routes");
 // instanced module
-const app = express();
 
-app.get("/api/v1/sales", (req, res) => {
-  res.status(200).json({ success: true, msg: "Show all sales" });
-});
+
+// app.get("/api/v1/sales", (req, res) => {
+//   res.status(200).json({ success: true, msg: "Show all sales" });
+// });
+
+// ROUTE = /api/v1
+
+// POST Create Cars
+router.post('/cars', ctrl.cars.create);
+
+// GET Cars by id
+router.get('/cars/:id', ctrl.cars.show);
+
+// GET All cars
+router.get('/cars', ctrl.cars.index);
+
+// DELETE cars by id
+router.delete('/cars/:id', ctrl.cars.destroy);
+
+
+
+
+module.exports = router;

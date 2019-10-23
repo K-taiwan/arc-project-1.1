@@ -1,21 +1,21 @@
 const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 4000;
 const bodyParser = require("body-parser");
-const db = require("./models/Index");
+const PORT = process.env.PORT || 4000;
+const app = express();
+const db = require("./models");
 // const session = require("express-session");
 
 // Routes
-// const routes = require("./routes");
+const routes = require("./routes");
 
 // ------------------------------------------------- MIDDLEWARE ------------------------------------------------- //
-
-// BodyParser Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
 // Serve Public Directory
 app.use(express.static(__dirname + "/public"));
+
+// BodyParser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // app.use(
 //   session({
@@ -28,10 +28,10 @@ app.use(express.static(__dirname + "/public"));
 // ------------------------------------------------- ENDPOINTS ------------------------------------------------- //
 
 // HTML Routes
-// app.use("/", routes.views);
+app.use("/", routes.views);
 
 // API Routes
-// app.use("/api/v1", routes.api);
+app.use("/api/v1", routes.api);
 
 //Show Cars
 
@@ -41,138 +41,6 @@ app.use(express.static(__dirname + "/public"));
 //   const file = `${__dirname}/db/cars.json`;
 //   res.sendFile(file);
 // });
-
-// API CAR ROUTES-----------------------------------------------------------------------
-app.get("/api/v1/cars", (req, res) => {
-  db.Cars.find({}, (error, allCars) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 200,
-      msg: "Show all cars",
-      requestedAt: new Date().toLocaleString(),
-      count: allCars.length,
-      data: allCars
-    });
-  });
-});
-
-//Create Car
-app.post("/api/v1/cars", (req, res) => {
-  db.Cars.create(req.body, (error, createdNewCar) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 201,
-      message: "Create new car",
-      requestedAt: new Date().toLocaleString(),
-      data: createdNewCar
-    });
-  });
-});
-
-// API SALE ROUTE------------------------------------------------------------------
-app.get("/api/v1/sales", (req, res) => {
-  db.Cars.find({}, (error, allSales) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 200,
-      msg: "Show all sales",
-      requestedAt: new Date().toLocaleString(),
-      count: allSales.length,
-      data: allSales
-    });
-  });
-});
-
-// New Sale
-app.post("/api/v1/sales", (req, res) => {
-  db.Cars.create(req.body, (error, newSale) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 201,
-      message: "New sale",
-      requestedAt: new Date().toLocaleString(),
-      data: newSale
-    });
-  });
-});
-
-// HOME PAGE ROUTE
-app.get("/", (req, res) => {
-  const file = `${__dirname}/views/home.html`;
-  res.sendFile(file);
-});
-
-// GALLERY ROUTE
-app.get("/gallery", (req, res) => {
-  const file = `${__dirname}/views/gallery.html`;
-  res.sendFile(file);
-});
-
-// SINGLE CAR ROUTE
-app.get("/gallery/:carId", (req, res) => {
-  const file = `${__dirname}/views/singlecar.html`;
-  res.sendFile(file);
-});
-
-// CHECKOUT ROUTE
-app.get("/checkout", (req, res) => {
-  const file = `${__dirname}/views/checkout.html`;
-  res.sendFile(file);
-});
-
-// DASHBOARD ROUTE
-app.get("/dashboard", (req, res) => {
-  const file = `${__dirname}/views/dashboard.html`;
-  res.sendFile(file);
-});
-
-// SUCCESS ROUTE
-app.get("/success", (req, res) => {
-  const file = `${__dirname}/views/success.html`;
-  res.sendFile(file);
-});
-
-//SALES API ROUTES------------------------------------------------------
-
-// SHOW ALL SALES
-app.get("/api/v1/sales", (req, res) => {
-  db.Sales.find({}, (error, allSales) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 200,
-      msg: "Show all sales",
-      requestedAt: new Date().toLocaleString(),
-      count: allSales.length,
-      data: allSales
-    });
-  });
-});
-
-// SHOW SINGLE SALE
-app.get("/api/v1/sales/:id", (req, res) => {
-  db.Sales.findOne({ id: req.params.id }, (error, foundSale) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 200,
-      message: "Show a single sale",
-      requestedAt: new Date().toLocaleString(),
-      data: foundSale
-    });
-  });
-});
-
-// CREATE NEW SALE
-app.post("/api/v1/sales", (req, res) => {
-  db.Sales.create(req.body, (error, createdSale) => {
-    if (error) return console.log(error);
-    res.json({
-      status: 201,
-      message: "Create new sale",
-      requestedAt: new Date().toLocaleString(),
-      data: createdSale
-    });
-  });
-});
 
 // // update
 // app.put("/api/v1/cars/:id", (req, res) => {
