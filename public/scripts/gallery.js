@@ -92,24 +92,7 @@ const getGallery = () => {
   });
 };
 
-<<<<<<< HEAD
-  const handleError = (response) => {
-    console.log(response)
-  };
-  
-  const getGallery = () => {
-    $.ajax({
-      method: 'GET',
-      url: '/gallery',
-      success: getGallerySuccess,
-      error: handleError,
-    });
-  };
-  
-  getGallery();
-=======
 getGallery();
->>>>>>> submaster
 
 // carSection.addEventListener('click', (event) => {
 // const userId = event.target.id;
