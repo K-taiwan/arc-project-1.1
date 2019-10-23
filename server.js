@@ -126,6 +126,12 @@ app.get("/dashboard", (req, res) => {
   res.sendFile(file);
 });
 
+// SUCCESS ROUTE
+app.get("/success", (req, res) => {
+  const file = `${__dirname}/views/success.html`;
+  res.sendFile(file);
+});
+
 //SALES API ROUTES------------------------------------------------------
 
 // SHOW ALL SALES
