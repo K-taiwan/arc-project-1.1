@@ -1,6 +1,7 @@
 // const carSection = document.querySelector
+console.log("çonnected!");
 
-const $carGallery = $(".album");
+const $carGallery = $("#carGallery");
 
 // const handleSuccess = (cars) => {
 //   cars.forEach(car => {
@@ -48,7 +49,7 @@ const getGallerySuccess = cars => {
       </div>
     </div>
   `;
-    $carGallery.prepend(template);
+    $carGallery.append(template);
   });
 };
 
@@ -85,7 +86,7 @@ const onError = response => {
 const getGallery = () => {
   $.ajax({
     method: "GET",
-    url: "https://localhost:4000/api/v1/cars",
+    url: "http://localhost:4000/api/v1/cars",
     success: getGallerySuccess,
     error: onError
   });
