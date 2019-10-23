@@ -1,13 +1,35 @@
+// const carSection = document.querySelector
+
+
 const $carGallery = $('#carGallery');
 
+// const handleSuccess = (cars) => {
+//   cars.forEach(car => {
+//     const template = `
+//       <li>${cars.name} | ${cars.email}<button class="delete" id="${car._id}"></button></li> 
+//     `;
+//     document.querySelector('.cars').insertAdjacentHTML('afterbegin', template)
+//   })
+// }      under the gallery html give ul class of cars. add event listener on the UL
 
-const getGallerySuccess = (response) => {
-    console.log(response);
-    response.data.forEach((cars) => {
+// const getAllGallerys = () => {
+//   fetch('/api/v1/gallerys', {
+//     method: 'GET'
+//   })
+//     .then(stream => stream.json())
+//     .then(res => {
+//      handleSuccess(res.data);
+//  })
+//     .catch((err) => console.log(err));
+// }
+
+const getGallerySuccess = (cars) => {
+    console.log(cars);
+    cars.data.forEach((cars) => {
       $carGallery.prepend(`
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="${cars.image} alt="cars" />
+            <img src="${cars.image}" alt="cars" />
             <div class="card-body">
               <h4 class="mb-4">${cars.brand} + '' + ${cars.model}</h4>
               <p class="card-text mb-2"><strong>Email</strong>: ${cars.email}</p>
@@ -26,6 +48,15 @@ const getGallerySuccess = (response) => {
     });
   };
 
+//   const onSuccess = (gif)=>{
+//     console.log(gif);
+//     $('.gif-gallery').empty();
+//     gif.data.forEach((data)=>{
+//         const template = `<img src="${data.images.fixed_height.url}"></img>`
+//         <p> dsjfhskfhsdkj</p>;
+//         $('.gif-gallery').append(template);
+//     });
+// };
 //   <div id="carGallery" class="row">
 //   <div class="col-md-4">
 //     <div class="card mb-4 box-shadow">
@@ -59,3 +90,10 @@ const getGallerySuccess = (response) => {
   };
   
   getGallery();
+
+  // carSection.addEventListener('click', (event) => {
+  // const userId = event.target.id;
+  //   if(event.target.classList.contains('delete)) {
+  //   console.log('Delete CAR')
+  // }
+  // });
