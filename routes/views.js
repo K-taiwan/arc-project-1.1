@@ -60,6 +60,14 @@ router.get('/', (req, res) => {
     });
   });
   
+  // Success
+  router.get('/success', (req, res) => {
+    res.sendFile('/views/success.html', {
+        root: `${__dirname}/../`
+    });
+  });
+
+ 
   
 
 module.exports = router;

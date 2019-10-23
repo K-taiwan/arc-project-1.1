@@ -6,6 +6,7 @@ const carSchema = new Schema({
   brand: String,
   year: String,
   price: Number,
+  image: String,
   convertible: Boolean,
   description: String,
   sales:{
