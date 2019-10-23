@@ -279,4 +279,6 @@ const validate = () => {
 $("#confirm").click(function() {
   event.preventDefault();
   validate();
+
 });
+
