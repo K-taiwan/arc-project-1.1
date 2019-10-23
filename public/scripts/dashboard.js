@@ -4,6 +4,10 @@ onSuccess = response => {
   response.data.forEach(newSale => {
     const template = `
       <tr>
+<<<<<<< HEAD
+=======
+      <button>Delete</button>
+>>>>>>> submaster
       <td>${newSale.firstName}</td>
       <td>${newSale.lastName}</td>
       <td>${newSale.email}</td>
@@ -22,4 +26,8 @@ $.ajax({
   url: "http://localhost:4000/api/v1/sales",
   success: onSuccess,
   error: onError
+});
+
+$("button").click(function() {
+  event.preventDefault();
 });
