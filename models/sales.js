@@ -58,10 +58,16 @@ const saleSchema = new Schema({
     type: Number,
     required: true
   },
-  carId: {
-    type: String,
+  carId: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Car',
     required: true
-  },
+  }],
+  // // reference by ID of pokemon
+  // pokemon: [{
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Pokemon'
+  // }],
 
   price: {
     type: String,

@@ -12,6 +12,40 @@ const create = (req, res) => {
     });
 };
 
+// const update = (req, res) => {
+//   db.Car.put(req.params.id, (err, updatedCar) => {
+//     if (err) return console.log(err);
+//     res.json({
+//       status: 201,
+//       message: "Update car",
+//       requestedAt: new Date().toLocaleString(),
+//       data: updatedCar
+//     });
+//   });
+// };
+
+const update = (req,res) => {
+  db.Car.findById(req.params.id, function(err, carUpdate) {
+    if (!carUpdate)
+      res.status(404).send("data is not found!");
+    else {
+      carUpdate.model = req.body.model;
+      carUpdate.brand = req.body.brand;
+      carUpdate.year = req.body.year;
+      carUpdate.price = req.body.price;
+      carUpdate.image = req.body.image;
+      carUpdate.convertible = req.body.convertible;
+      carUpdate.description = req.body.description;
+
+      carUpdate.save().then( car => {
+        res.json('Update complete!');
+      })
+      .catch(err => {
+        res.status(400).send("unable to update the DB!");
+      })
+    }
+  })
+};
 
 const show = (req, res) => {
   console.log('Received request at Profile Route');
@@ -58,6 +92,7 @@ const destroy = (req, res) => {
 module.exports = {
   create,
   show,
+  update,
   index,
   destroy,
   
