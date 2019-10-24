@@ -7,7 +7,8 @@
     "price": 60,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/JKVCgO-zQaWRs3zh69Gpow.1440x700.jpg",
     "convertible": false,
-    "description": "22 MPG, Gas (Premium), 4 seats, automatic transmission, gps"
+    "description": "22 MPG, Gas (Premium), 4 seats, automatic transmission, gps",
+    "date": "7/19/19"
   },
   {
     "model": "Model X",
@@ -16,7 +17,8 @@
     "price": 142,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/rsGGJfUHSNGBMmwl4xMoUw.1440x700.jpg",
     "convertible": false,
-    "description": "Electric, LTE internet browsing, 7 seats, Falcon Doors, Free Super Charging"
+    "description": "Electric, LTE internet browsing, 7 seats, Falcon Doors, Free Super Charging",
+    "date": "10/1/19"
   },
   {
     "model": "M5",
@@ -25,7 +27,8 @@
     "price": 151,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/LD6DNpTiSCeCYjFL8RIugg.1440x700.jpg",
     "convertible": false,
-    "description": "17 MPG, Gas (Premium), 5 seats, Bluetooth, Bang & Olufsen premium surround sound stereo, Heated seats and steering wheel"
+    "description": "17 MPG, Gas (Premium), 5 seats, Bluetooth, Bang & Olufsen premium surround sound stereo, Heated seats and steering wheel",
+    "date": "9/22/19"
   },
   {
     "model": "Cooper Roadster",
@@ -34,7 +37,8 @@
     "price": 58,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/F_rek2qSSla2YQ4fiYHJfg.1440x700.jpg",
     "convertible": true,
-    "description": "31 MPG, Gas (Premium), 2 seats, Bluetooth, Automatic Transmission, Toll pass"
+    "description": "31 MPG, Gas (Premium), 2 seats, Bluetooth, Automatic Transmission, Toll pass",
+    "date": "8/24/19"
   },
   {
     "model": "Challenger",
@@ -43,7 +47,8 @@
     "price": 54,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/Qmr0eeFMTb21x-VjQOX-_w.1440x700.jpg",
     "convertible": false,
-    "description": "24 MPG, Gas (Regular), 4 seats, Bluetooth, Automatic Transmission, Harman Kardon 18-Speakers audio system"
+    "description": "24 MPG, Gas (Regular), 4 seats, Bluetooth, Automatic Transmission, Harman Kardon 18-Speakers audio system",
+    "date": "7/27/19"
   },
   {
     "model": "Mustang",
@@ -52,7 +57,8 @@
     "price": 76,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/Jhd3ouvqTKiIYQvcLgBgAA.1440x700.jpg",
     "convertible": true,
-    "description": "26 MPG, Gas (Premium), 4 seats, Bluetooth, Automatic Transmission, Keyless Entry and Start"
+    "description": "26 MPG, Gas (Premium), 4 seats, Bluetooth, Automatic Transmission, Keyless Entry and Start",
+    "date": "10/22/19"
   },
   {
     "model": "F-150",
@@ -61,7 +67,8 @@
     "price": 51,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/F7W4Xe_bS-mmYMixTMl5wQ.1440x700.jpg",
     "convertible": false,
-    "description": "20 MPG, Gas (Regular), 6 seats, Bluetooth, Automatic Transmission, 5500 lb towing capacity"
+    "description": "20 MPG, Gas (Regular), 6 seats, Bluetooth, Automatic Transmission, 5500 lb towing capacity",
+    "date": "10/18/19"
   },
   {
     "model": "i8",
@@ -70,7 +77,8 @@
     "price": 269,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/r4yfiLriRF-9fzgYQRnmLQ.1440x700.jpg",
     "convertible": false,
-    "description": "54 MPG, Hybrid (Premium), 4 seats, Bluetooth, Automatic Transmission, 0-60 MPH in under 4 seconds!"
+    "description": "54 MPG, Hybrid (Premium), 4 seats, Bluetooth, Automatic Transmission, 0-60 MPH in under 4 seconds!",
+    "date": "10/12/19"
   },
   {
     "model": "Slingshot",
@@ -79,7 +87,8 @@
     "price": 96,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/7krbaYGRQ1S2ZqlsSRIQxQ.1440x700.jpg",
     "convertible": true,
-    "description": "20 MPG, Gas (Premium), 2 seats, Manual Transmission,"
+    "description": "20 MPG, Gas (Premium), 2 seats, Manual Transmission,",
+    "date": "10/20/19"
   },
   {
     "model": "Niro Plug-In Hybrid",
@@ -88,7 +97,8 @@
     "price": 49,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/iK5FV92iRGybs7VrNk6kWA.1440x700.jpg",
     "convertible": false,
-    "description": "50 MPG, Hybrid (Regular), 5 seats, Automatic Transmission,"
+    "description": "50 MPG, Hybrid (Regular), 5 seats, Automatic Transmission,",
+    "date": "10/1/19"
   },
   {
     "model": "Corvette",
@@ -97,7 +107,8 @@
     "price": 116,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/EYNtxot0SoGHh4_1d3NZMQ.1440x700.jpg",
     "convertible": true,
-    "description": "23 MPG, Gas (Premium), 2 seats, Automatic Transmission, 455HP & 460TQ @ 6000 RPM"
+    "description": "23 MPG, Gas (Premium), 2 seats, Automatic Transmission, 455HP & 460TQ @ 6000 RPM",
+    "date": "10/13/19"
   },
   {
     "model": "Range Rover",
@@ -106,7 +117,8 @@
     "price": 122,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/gpTPhFfeTlGhrp8Ihic3Qw.1440x700.jpg",
     "convertible": false,
-    "description": "20 MPG, Gas (Premium), 5 seats, Automatic Transmission, AWD Supercharged 3.0, 4x4"
+    "description": "20 MPG, Gas (Premium), 5 seats, Automatic Transmission, AWD Supercharged 3.0, 4x4",
+    "date": "10/22/19"
   },
   {
     "model": "Fosca, Beetle",
@@ -115,7 +127,8 @@
     "price": 200,
     "image": "https://i.pinimg.com/originals/cb/5d/b7/cb5db7b8881408d2a02a278a00839aed.jpg",
     "convertible": false,
-    "description": "15 MPG, Gas (Premium), 2 seats, Manual Transmission, Rauh Welt modified"
+    "description": "15 MPG, Gas (Premium), 2 seats, Manual Transmission, Rauh Welt modified",
+    "date": "10/22/19"
   },{
     "model": "Camaro",
     "brand": "Chevrolet",
@@ -123,7 +136,8 @@
     "price": 73,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/JnomWD7KSPaNss79plAGHw.1440x700.jpg",
     "convertible": true,
-    "description": "26 MPG, Gas (Premium), 4 seats, Automatic Transmission, Toll Pass"
+    "description": "26 MPG, Gas (Premium), 4 seats, Automatic Transmission, Toll Pass",
+    "date": "10/18/19"
   },{
     "model": "428i",
     "brand": "BMW",
@@ -131,7 +145,8 @@
     "price": 79,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/yKoGjuTeQbCpHnTKOGM1Ow.1440x700.jpg",
     "convertible": true,
-    "description": "28 MPG, Gas (Premium), 4 seats, Automatic Transmission, M Package, Harman-Kardon premium Audio, GPS"
+    "description": "28 MPG, Gas (Premium), 4 seats, Automatic Transmission, M Package, Harman-Kardon premium Audio, GPS",
+    "date": "10/19/19"
   },{
     "model": "Boxster",
     "brand": "Porsche",
@@ -139,7 +154,8 @@
     "price": 119,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/FPdMjWpsQimSZoU7NIFD-A.1440x700.jpg",
     "convertible": true,
-    "description": "26 MPG, Gas (Premium), 2 seats, Automatic Transmission, Sport Chrono, PASM, Torque Vectoring, and Carbon Ceramic Brakes, 315hp 3.4L flat6 naturally aspirated Engine, 7 Speed PDK Automatic Transmission"
+    "description": "26 MPG, Gas (Premium), 2 seats, Automatic Transmission, Sport Chrono, PASM, Torque Vectoring, and Carbon Ceramic Brakes, 315hp 3.4L flat6 naturally aspirated Engine, 7 Speed PDK Automatic Transmission",
+    "date": "10/15/19"
   },{
     "model": "F-Type V8 S",
     "brand": "Jaguar",
@@ -147,7 +163,8 @@
     "price": 162,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/j-nhxJskRuuSAukwEPEGnQ.1440x700.jpg",
     "convertible": true,
-    "description": "20 MPG, Gas (Premium), 4 seats, Automatic Transmission, 495hp 5.0L supercharged V8 Engine, Active Exhaust button pressed, 8 Speed ZF QuickShift Automatic Transmission, 770W Meridian Premium Audio 12 Speaker System"
+    "description": "20 MPG, Gas (Premium), 4 seats, Automatic Transmission, 495hp 5.0L supercharged V8 Engine, Active Exhaust button pressed, 8 Speed ZF QuickShift Automatic Transmission, 770W Meridian Premium Audio 12 Speaker System",
+    "date": "10/22/19"
   },{
     "model": "AMG C 63 S Edition 1",
     "brand": "Mercedes",
@@ -155,7 +172,8 @@
     "price": 350,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/nT8uhUOWTguWcPmwWEXXGg.1440x700.jpg",
     "convertible": false,
-    "description": "21 MPG, Gas (Premium), 5 seats, Automatic Transmission, 503hp Twin Turbo V8 & 516tq, 0-60 3.9s"
+    "description": "21 MPG, Gas (Premium), 5 seats, Automatic Transmission, 503hp Twin Turbo V8 & 516tq, 0-60 3.9s",
+    "date": "10/23/19"
   },{
     "model": "GTR Premium",
     "brand": "Nissa",
@@ -163,7 +181,8 @@
     "price": 254,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/pZ1lczVqSnWjnKzN5lNcqQ.1440x700.jpg",
     "convertible": false,
-    "description": "18 MPG, Gas (Premium), 4 seats, Automatic Transmission, 4485hp Turbo V6 & 434tq, 0-60 3.5s"
+    "description": "18 MPG, Gas (Premium), 4 seats, Automatic Transmission, 4485hp Turbo V6 & 434tq, 0-60 3.5s",
+    "date": "10/22/19"
   },{
     "model": "AMG GT Roadster",
     "brand": "Mercedes",
@@ -171,7 +190,8 @@
     "price": 254,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/QEqO7E_MTMaIcM_1nGO8lw.1440x700.jpg",
     "convertible": true,
-    "description": "19 MPG, Gas (Premium), 2 seats, Automatic Transmission, 469hp Twin Turbo V8"
+    "description": "19 MPG, Gas (Premium), 2 seats, Automatic Transmission, 469hp Twin Turbo V8",
+    "date": "10/12/19"
   },{
     "model": "G550",
     "brand": "Mercedes",
@@ -179,7 +199,8 @@
     "price": 260,
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/g1LaZcCsQj-IaKd1lnM1Mg.1440x700.jpg",
     "convertible": false,
-    "description": "14 MPG, Gas (Premium), 5 seats, Automatic Transmission, EngineEngine Type: Premium Unleaded V-8Displacement: 5.5 L/333Horsepower (Net @ RPM): 382 @ 6000Torque (Net @ RPM): 391 @ 2800"
+    "description": "14 MPG, Gas (Premium), 5 seats, Automatic Transmission, EngineEngine Type: Premium Unleaded V-8Displacement: 5.5 L/333Horsepower (Net @ RPM): 382 @ 6000Torque (Net @ RPM): 391 @ 2800",
+    "date": "10/22/19"
   }
 
 
