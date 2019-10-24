@@ -9,6 +9,7 @@ const carSchema = new Schema({
   image: String,
   convertible: Boolean,
   description: String,
+  date: String,
   sales:{
     type: Schema.Types.ObjectId,
     ref: 'sales'
