@@ -36,10 +36,7 @@ const getGallerySuccess = cars => {
           <p class="card-text"><strong>Phone</strong>: ${cars.phone}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <a class="btn btn-sm btn-outline-secondary" href="/contacts/${
-                cars._id
-              }">View</a>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}">Purchase</a></button>
             </div>
             <small class="text-muted">Added ${new Date(
               cars.dateCreated
