@@ -10,7 +10,6 @@
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  /* margin-top: 30px; */
 }
 
 .arc {
@@ -22,7 +21,6 @@
 .arc-checkout {
   font-family: "Major Mono Display", monospace;
   font-size: 40px;
-  /* margin-left: 50px; */
 }
 
 .your-checkout {
@@ -41,23 +39,8 @@
   text-decoration: none;
   font-size: 30px;
   margin: 0 25px;
+  font-family: "Source Code Pro", monospace;
 }
 .navbar-item:hover {
-  text-decoration: underline;
   color: white;
-}
-
-.featurette {
-  padding: 60px;
-  background: rgb(0, 24, 53);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#cc-name {
-  text-transform: uppercase;
-}
-
-#cc-cvv {
-  font-style: italic;
 }

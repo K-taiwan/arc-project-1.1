@@ -29,7 +29,7 @@ const getGallerySuccess = cars => {
     const template = `
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-        <img src="${cars.image}" alt="cars" />
+        <img class="car-img" src="${cars.image}" alt="cars" />
         <div class="card-body">
           <h4 class="mb-4">${cars.brand}  ${cars.model}</h4>
           <p class="card-text mb-2"><strong>Year</strong>: ${cars.year}</p>
