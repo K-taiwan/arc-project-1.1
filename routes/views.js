@@ -32,8 +32,8 @@ router.get('/', (req, res) => {
   //   const file = `${__dirname}/views/singlecar.html`;
   //   res.sendFile(file);
   // });
-  router.get('/gallery/:carId', (req, res) => {
-    res.sendFile('/views/singlecar.html', {
+  router.get('/gallery/:id', (req, res) => {
+    res.sendFile('/views/checkoutId.html', {
         root: `${__dirname}/../`
     });
   });
