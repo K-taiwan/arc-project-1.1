@@ -148,6 +148,38 @@
     "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/j-nhxJskRuuSAukwEPEGnQ.1440x700.jpg",
     "convertible": true,
     "description": "20 MPG, Gas (Premium), 4 seats, Automatic Transmission, 495hp 5.0L supercharged V8 Engine, Active Exhaust button pressed, 8 Speed ZF QuickShift Automatic Transmission, 770W Meridian Premium Audio 12 Speaker System"
+  },{
+    "model": "AMG C 63 S Edition 1",
+    "brand": "Mercedes",
+    "year": 2017,
+    "price": 350,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/nT8uhUOWTguWcPmwWEXXGg.1440x700.jpg",
+    "convertible": false,
+    "description": "21 MPG, Gas (Premium), 5 seats, Automatic Transmission, 503hp Twin Turbo V8 & 516tq, 0-60 3.9s"
+  },{
+    "model": "GTR Premium",
+    "brand": "Nissa",
+    "year": 2010,
+    "price": 254,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/pZ1lczVqSnWjnKzN5lNcqQ.1440x700.jpg",
+    "convertible": false,
+    "description": "18 MPG, Gas (Premium), 4 seats, Automatic Transmission, 4485hp Turbo V6 & 434tq, 0-60 3.5s"
+  },{
+    "model": "AMG GT Roadster",
+    "brand": "Mercedes",
+    "year": 2018,
+    "price": 254,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/QEqO7E_MTMaIcM_1nGO8lw.1440x700.jpg",
+    "convertible": true,
+    "description": "19 MPG, Gas (Premium), 2 seats, Automatic Transmission, 469hp Twin Turbo V8"
+  },{
+    "model": "G550",
+    "brand": "Mercedes",
+    "year": 2015,
+    "price": 260,
+    "image": "https://d1zgdcrdir5wgt.cloudfront.net/media/vehicle/images/g1LaZcCsQj-IaKd1lnM1Mg.1440x700.jpg",
+    "convertible": false,
+    "description": "14 MPG, Gas (Premium), 5 seats, Automatic Transmission, EngineEngine Type: Premium Unleaded V-8Displacement: 5.5 L/333Horsepower (Net @ RPM): 382 @ 6000Torque (Net @ RPM): 391 @ 2800"
   }
 
 
