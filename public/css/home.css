@@ -41,6 +41,7 @@
   text-decoration: none;
   font-size: 30px;
   margin: 0 25px;
+  font-family: "Source Code Pro", monospace;
 }
 .navbar-item:hover {
   text-decoration: underline;
@@ -94,3 +95,5 @@
 .dodge {
   font-family: "Permanent Marker", cursive;
 }
+
+

@@ -43,11 +43,11 @@ router.get('/', (req, res) => {
   //   const file = `${__dirname}/views/checkout.html`;
   //   res.sendFile(file);
   // });
-  router.get('/checkout', (req, res) => {
-    res.sendFile('/views/checkout.html', {
-        root: `${__dirname}/../`
-    });
-  });
+  // router.get('/checkout', (req, res) => {
+  //   res.sendFile('/views/checkout.html', {
+  //       root: `${__dirname}/../`
+  //   });
+  // });
   
   // DASHBOARD ROUTE
   // app.get("/dashboard", (req, res) => {

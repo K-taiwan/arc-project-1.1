@@ -1,5 +1,9 @@
 console.log("Javascript connected...");
 // INITIAL DATA
+
+const carId = new URL(location.href).searchParams.get("id");
+// const carId = new URL(location.href).searchParams.get('car');
+
 let iChars = [
   "˜",
   "`",
@@ -31,6 +35,49 @@ let iChars = [
 
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+// APPEDN CHOSEN CAR------------------------------------------------------------------------
+let $chosenCar = $("#chosenCar");
+// console.log(cars.data._id)
+console.log(carId);
+const appendChosenCar = car => {
+  console.log(car);
+  const template = `
+    <div class="col-md-12">
+      <div class="card mb-4 shadow-sm">
+        <img class="car-img" src="${car.data.image}" alt="cars" />
+        <div class="card-body">
+          <h4 class="mb-4">${car.data.brand}  ${car.data.model}</h4>
+          <p class="card-text mb-2"><strong>Year</strong>: ${car.data.year}</p>
+          <p class="card-text"><strong>Price</strong>: $${car.data.price}</p>
+          <p class="card-text"><strong>Convertible</strong>: ${car.data.convertible}</p>
+          <p class="card-text"><strong>Description</strong>: ${car.data.description}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${car.data._id}?id=${car.data._id}">Purchase</a></button>
+            </div>
+            <small class="text-muted">Added ${car.data.date}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  $chosenCar.append(template);
+};
+
+const onError = response => {
+  console.log(response);
+};
+
+const getGallery = () => {
+  $.ajax({
+    method: "GET",
+    url: `/api/v1/cars/${carId}`,
+    success: appendChosenCar,
+    error: onError
+  });
+};
+
+getGallery();
 // FORM VALIDATION-----------------------------------------------------------------
 // FIRST NAME----------------------------------------------------------------------
 $("#firstName").blur(function() {
@@ -238,12 +285,13 @@ const onSuccess = () => {
   //   onSuccess load to success page
 };
 
-const onError = () => {
-  console.log("error");
-};
+// const onError = () => {
+//   console.log("error");
+// };
 
 const sendNewSale = () => {
-  // event.preventDefault();
+  event.preventDefault();
+  // console.log($("#cc-cvv").val());
   $.ajax({
     method: "POST",
     url: "http://localhost:4000/api/v1/sales",
@@ -258,14 +306,13 @@ const sendNewSale = () => {
       state: $("#state").val(),
       zip: $("#zip").val(),
 
-      // paymentMethod: "Dont't know how",
-      // nameOnCard: $("#cc-name").val(),
-      // cardNum: $("#cc-number").val(),
-      // expDate: $("#cc-expiration").val(),
-      // cvv: $("#cc-ccv").val(),
-      carId: `5db0c21328f1be5e5ad4cef2`,
-      // price: "don't know either"
-
+      paymentMethod: "Dont't know how",
+      nameOnCard: $("#cc-name").val(),
+      cardNum: $("#cc-number").val(),
+      expDate: $("#cc-expiration").val(),
+      cvv: $("#cc-cvv").val(),
+      carId: carId,
+      price: "don't know either"
     },
     success: onSuccess,
     error: onError

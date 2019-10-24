@@ -9,10 +9,8 @@ const carSchema = new Schema({
   image: String,
   convertible: Boolean,
   description: String,
-  sales:{
-    type: Schema.Types.ObjectId,
-    ref: 'sales'
-  }
+  date: String,
+ 
 });
 
 const Car = mongoose.model('Car', carSchema);

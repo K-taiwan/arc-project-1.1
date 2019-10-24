@@ -39,8 +39,11 @@ const update = (req, res) => {
 
       carUpdate
         .save()
-        .then(car => {
-          res.json("Success, Update complete!");
+        .then(car=> {
+          res.json({
+            status: 200,
+            data: car
+          });
         })
         .catch(err => {
           res.status(400).send("Something went wrong, Please try again!");

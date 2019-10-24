@@ -1,5 +1,5 @@
 // const carSection = document.querySelector
-console.log("çonnected!");
+// console.log("connected!");
 
 const $carGallery = $("#carGallery");
 
@@ -29,18 +29,18 @@ const getGallerySuccess = cars => {
     const template = `
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-        <img src="${cars.image}" alt="cars" />
+        <img class="car-img" src="${cars.image}" alt="cars" />
         <div class="card-body">
-          <h4 class="mb-4">${cars.brand} + '' + ${cars.model}</h4>
-          <p class="card-text mb-2"><strong>Email</strong>: ${cars.email}</p>
-          <p class="card-text"><strong>Phone</strong>: ${cars.phone}</p>
+          <h4 class="mb-4">${cars.brand}  ${cars.model}</h4>
+          <p class="card-text mb-2"><strong>Year</strong>: ${cars.year}</p>
+          <p class="card-text"><strong>Price</strong>: $${cars.price}</p>
+          <p class="card-text"><strong>Convertible</strong>: ${cars.convertible}</p>
+          <p class="card-text"><strong>Description</strong>: ${cars.description}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}">Purchase</a></button>
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}?id=${cars._id}">Purchase</a></button>
             </div>
-            <small class="text-muted">Added ${new Date(
-              cars.dateCreated
-            ).toLocaleDateString()}</small>
+            <small class="text-muted">Added ${cars.date}</small>
           </div>
         </div>
       </div>
@@ -49,6 +49,9 @@ const getGallerySuccess = cars => {
     $carGallery.append(template);
   });
 };
+/* <div class="btn-group">
+  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}?id=${cars._id}">Purchase</a></button>
+</div> */
 
 //   const onSuccess = (gif)=>{
 //     console.log(gif);
@@ -83,7 +86,7 @@ const onError = response => {
 const getGallery = () => {
   $.ajax({
     method: "GET",
-    url: "http://localhost:4000/api/v1/cars",
+    url: `http://localhost:4000/api/v1/cars/`,
     success: getGallerySuccess,
     error: onError
   });
