@@ -33,7 +33,7 @@ const getGallerySuccess = cars => {
         <div class="card-body">
           <h4 class="mb-4">${cars.brand}  ${cars.model}</h4>
           <p class="card-text mb-2"><strong>Year</strong>: ${cars.year}</p>
-          <p class="card-text"><strong>Price</strong>: ${cars.price}</p>
+          <p class="card-text"><strong>Price</strong>: $${cars.price}</p>
           <p class="card-text"><strong>Convertible</strong>: ${cars.convertible}</p>
           <p class="card-text"><strong>Description</strong>: ${cars.description}</p>
           <div class="d-flex justify-content-between align-items-center">
