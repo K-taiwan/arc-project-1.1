@@ -4,68 +4,70 @@ const Schema = mongoose.Schema;
 const saleSchema = new Schema({
   firstName: {
     type: String,
-    required: true
+    // required: true
   },
   lastName: {
     type: String,
-    required: true
-  },
-  birthDate: {
-    type: Date,
-    required: true
+    // required: true
   },
   email: {
     type: String,
-    required: true
+    // required: true
+  },
+  birthDate: {
+    type: Date,
+    // required: true
   },
   phone: {
     type: String,
-    required: true
+    // required: true
   },
   address: {
     type: String,
-    required: true
+    // required: true
   },
   country: {
     type: String,
-    required: true
+    // required: true
   },
   state: {
     type: String,
-    required: true
+    // required: true
   },
   zip: {
     type: Number,
-    required: true
+    // required: true
   },
   paymentMethod: {
     type: String,
-    required: true
+    // required: true
   },
   nameOnCard: {
     type: String,
-    required: true
+    // required: true
   },
   cardNum: {
     type: String,
-    required: true
+    // required: true
   },
   expDate: {
     type: Date,
-    required: true
+    // required: true
   },
   cvv: {
     type: Number,
-    required: true
+    // required: true
   },
-  carId: {
-    type: String,
-    required: true
-  },
-
+  carId: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Car",
+      // required: true
+    }
+  ],
   price: {
     type: String,
-    required: true
+    // required: true
   }
 });
 

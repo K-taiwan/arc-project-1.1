@@ -26,9 +26,13 @@ router.get('/cars', ctrl.cars.index);
 // DELETE cars by id
 router.delete('/cars/:id', ctrl.cars.destroy);
 
+// Put by id
+router.put('/cars/:id', ctrl.cars.update);
 
 
-// POST Create Cars
+
+
+// POST Create Sales
 router.post('/sales', ctrl.sales.create);
 
 // GET Cars by id

@@ -31,8 +31,6 @@ let iChars = [
 
 let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-let newSale = [];
-
 // FORM VALIDATION-----------------------------------------------------------------
 // FIRST NAME----------------------------------------------------------------------
 $("#firstName").blur(function() {
@@ -213,16 +211,16 @@ $("#cc-cvv").blur(function() {
     $("#cc-cvv").removeClass("is-invalid");
   }
 
-  for (let i = 0; i < alphabet.length; i++) {
-    if (
-      $("#cc-cvv")
-        .val()
-        .includes(alphabet[i]) === true
-    ) {
-      $("#cc-cvv").addClass("is-invalid");
-      valid = true;
-    }
-  }
+  // for (let i = 0; i < alphabet.length; i++) {
+  //   if (
+  //     $("#cc-cvv")
+  //       .val()
+  //       .includes(alphabet[i]) === true
+  //   ) {
+  //     $("#cc-cvv").addClass("is-invalid");
+  //     valid = true;
+  //   }
+  // }
 
   for (let i = 0; i < iChars.length; i++) {
     if (
@@ -252,7 +250,22 @@ const sendNewSale = () => {
     data: {
       firstName: $("#firstName").val(),
       lastName: $("#lastName").val(),
-      email: $("#email").val()
+      email: $("#email").val(),
+      birthDate: $("#birth-date").val(),
+      phone: $("#phone").val(),
+      address: $("#address").val(),
+      country: $("#country").val(),
+      state: $("#state").val(),
+      zip: $("#zip").val(),
+
+      // paymentMethod: "Dont't know how",
+      // nameOnCard: $("#cc-name").val(),
+      // cardNum: $("#cc-number").val(),
+      // expDate: $("#cc-expiration").val(),
+      // cvv: $("#cc-ccv").val(),
+      carId: `5db0c21328f1be5e5ad4cef2`,
+      // price: "don't know either"
+
     },
     success: onSuccess,
     error: onError

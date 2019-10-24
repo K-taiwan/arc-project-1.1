@@ -1,12 +1,12 @@
 // const carSection = document.querySelector
+console.log("çonnected!");
 
-
-const $carGallery = $('#carGallery');
+const $carGallery = $("#carGallery");
 
 // const handleSuccess = (cars) => {
 //   cars.forEach(car => {
 //     const template = `
-//       <li>${cars.name} | ${cars.email}<button class="delete" id="${car._id}"></button></li> 
+//       <li>${cars.name} | ${cars.email}<button class="delete" id="${car._id}"></button></li>
 //     `;
 //     document.querySelector('.cars').insertAdjacentHTML('afterbegin', template)
 //   })
@@ -23,30 +23,32 @@ const $carGallery = $('#carGallery');
 //     .catch((err) => console.log(err));
 // }
 
-const getGallerySuccess = (cars) => {
-    console.log(cars);
-    cars.data.forEach((cars) => {
-      $carGallery.prepend(`
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="${cars.image}" alt="cars" />
-            <div class="card-body">
-              <h4 class="mb-4">${cars.brand} + '' + ${cars.model}</h4>
-              <p class="card-text mb-2"><strong>Email</strong>: ${cars.email}</p>
-              <p class="card-text"><strong>Phone</strong>: ${cars.phone}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a class="btn btn-sm btn-outline-secondary" href="/contacts/${cars._id}">View</a>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">Added ${new Date(cars.dateCreated).toLocaleDateString()}</small>
-              </div>
+const getGallerySuccess = cars => {
+  console.log(cars);
+  cars.data.forEach(cars => {
+    const template = `
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="${cars.image}" alt="cars" />
+        <div class="card-body">
+          <h4 class="mb-4">${cars.brand} + '' + ${cars.model}</h4>
+          <p class="card-text mb-2"><strong>Email</strong>: ${cars.email}</p>
+          <p class="card-text"><strong>Phone</strong>: ${cars.phone}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}">Purchase</a></button>
             </div>
+            <small class="text-muted">Added ${new Date(
+              cars.dateCreated
+            ).toLocaleDateString()}</small>
           </div>
         </div>
-      `)
-    });
-  };
+      </div>
+    </div>
+  `;
+    $carGallery.append(template);
+  });
+};
 
 //   const onSuccess = (gif)=>{
 //     console.log(gif);
@@ -74,26 +76,24 @@ const getGallerySuccess = (cars) => {
 //     </div>
 //   </div>
 
+const onError = response => {
+  console.log(response);
+};
 
+const getGallery = () => {
+  $.ajax({
+    method: "GET",
+    url: "http://localhost:4000/api/v1/cars",
+    success: getGallerySuccess,
+    error: onError
+  });
+};
 
-  const handleError = (response) => {
-    console.log(response)
-  };
-  
-  const getGallery = () => {
-    $.ajax({
-      method: 'GET',
-      url: '/api/v1/gallery',
-      success: getGallerySuccess,
-      error: handleError,
-    });
-  };
-  
-  getGallery();
+getGallery();
 
-  // carSection.addEventListener('click', (event) => {
-  // const userId = event.target.id;
-  //   if(event.target.classList.contains('delete)) {
-  //   console.log('Delete CAR')
-  // }
-  // });
+// carSection.addEventListener('click', (event) => {
+// const userId = event.target.id;
+//   if(event.target.classList.contains('delete)) {
+//   console.log('Delete CAR')
+// }
+// });
