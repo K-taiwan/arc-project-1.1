@@ -257,6 +257,7 @@ const sendNewSale = () => {
       country: $("#country").val(),
       state: $("#state").val(),
       zip: $("#zip").val(),
+
       // paymentMethod: "Dont't know how",
       // nameOnCard: $("#cc-name").val(),
       // cardNum: $("#cc-number").val(),
@@ -264,6 +265,7 @@ const sendNewSale = () => {
       // cvv: $("#cc-ccv").val(),
       carId: `5db0c21328f1be5e5ad4cef2`,
       // price: "don't know either"
+
     },
     success: onSuccess,
     error: onError
@@ -292,6 +294,4 @@ const validate = () => {
 $("#confirm").click(function() {
   event.preventDefault();
   validate();
-
 });
-
