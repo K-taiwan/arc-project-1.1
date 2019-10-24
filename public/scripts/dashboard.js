@@ -47,7 +47,7 @@ $("button").click(function() {
 $('#table-body').on('click', '.update', (event) => {
   // console.log(event.target.parentNode.parentNode);
   // const id = event.target.parentNode;
-  $(event.target.parentNode).replaceWith(`<p>Replaced</p>`)
+  $(event.target.parentNode).replaceWith(`<p class="endgame">Replaced</p>`)
   
   // const id = event.target.parentNode.parentNode.id;
   // const data = event.target.parentNode.parentNode.data;
