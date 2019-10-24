@@ -1,5 +1,9 @@
 console.log("Javascript connected...");
 // INITIAL DATA
+
+const carId = new URL(location.href).searchParams.get('id');
+console.log(carId);
+
 let iChars = [
   "˜",
   "`",
@@ -243,7 +247,8 @@ const onError = () => {
 };
 
 const sendNewSale = () => {
-  // event.preventDefault();
+  event.preventDefault();
+  // console.log($("#cc-cvv").val());
   $.ajax({
     method: "POST",
     url: "http://localhost:4000/api/v1/sales",
@@ -258,13 +263,13 @@ const sendNewSale = () => {
       state: $("#state").val(),
       zip: $("#zip").val(),
 
-      // paymentMethod: "Dont't know how",
-      // nameOnCard: $("#cc-name").val(),
-      // cardNum: $("#cc-number").val(),
-      // expDate: $("#cc-expiration").val(),
-      // cvv: $("#cc-ccv").val(),
-      carId: `5db0c21328f1be5e5ad4cef2`,
-      // price: "don't know either"
+      paymentMethod: "Dont't know how",
+      nameOnCard: $("#cc-name").val(),
+      cardNum: $("#cc-number").val(),
+      expDate: $("#cc-expiration").val(),
+      cvv: $("#cc-cvv").val(),
+      carId: carId,
+      price: "don't know either",
 
     },
     success: onSuccess,

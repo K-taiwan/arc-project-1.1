@@ -19,8 +19,8 @@ onSuccess = response => {
       <td>${newSale.cardNum}</td>
       <td>${newSale.expDate}</td>
       <td>${newSale.cvv}</td>
-      <td>${cars.carId}</td>
-      <td>${cars.price}</td>
+      <td>${newSale.carId}</td>
+      <td>${newSale.price}</td>
       </tr>
       `;
     $("tbody").append(template);
