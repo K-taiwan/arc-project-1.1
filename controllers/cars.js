@@ -65,19 +65,19 @@ const show = (req, res) => {
 // Index Profiles
 const index = (req, res) => {
 
-    db.Car.find({}, (err, allCars) => {
-      if (err) return console.log(err);
-      res.json({
-        status: 500,
-        msg: "Show all Cars",
-        requestedAt: new Date().toLocaleString(),
-        count: allCars.length,
-        data: allCars
-      });
-
+  db.Car.find({}, (err, allCars) => {
+    if (err) return console.log(err);
+    res.json({
+      status: 500,
+      msg: "Show all Cars",
+      requestedAt: new Date().toLocaleString(),
+      count: allCars.length,
+      data: allCars
     });
+
   });
 };
+
 
 const destroy = (req, res) => {
   db.Car.findByIdAndDelete(req.params.id, (err, deletedCar) => {
