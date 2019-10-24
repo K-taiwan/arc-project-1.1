@@ -38,7 +38,7 @@ const getGallerySuccess = cars => {
           <p class="card-text"><strong>Description</strong>: ${cars.description}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}?id=${cars._id}">Purchase</a></button>
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars}?id=${cars}">Purchase</a></button>
             </div>
             <small class="text-muted">Added ${cars.date}</small>
           </div>
@@ -49,6 +49,10 @@ const getGallerySuccess = cars => {
     $carGallery.append(template);
   });
 };
+/* <div class="btn-group">
+  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}?id=${cars._id}">Purchase</a></button>
+</div> */
+
 
 //   const onSuccess = (gif)=>{
 //     console.log(gif);

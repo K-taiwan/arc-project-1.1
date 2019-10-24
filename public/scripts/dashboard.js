@@ -14,7 +14,6 @@ onSuccess = response => {
       <td>${newSale.country}</td>
       <td>${newSale.state}</td>
       <td>${newSale.zip}</td>
-      <td>${newSale.paymentMethod}</td>
       <td>${newSale.nameOnCard}</td>
       <td>${newSale.cardNum}</td>
       <td>${newSale.expDate}</td>
