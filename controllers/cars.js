@@ -26,10 +26,8 @@ const create = (req, res) => {
 
 const update = (req, res) => {
   db.Car.findById(req.params.id, function(err, carUpdate) {
-
     if (!carUpdate)
       res.status(404).send("Something went wrong, Please try again!");
-
     else {
       carUpdate.model = req.body.model;
       carUpdate.brand = req.body.brand;
@@ -39,14 +37,14 @@ const update = (req, res) => {
       carUpdate.convertible = req.body.convertible;
       carUpdate.description = req.body.description;
 
-
-      carUpdate.save().then( car => {
-        res.json('Success, Update complete!');
-      })
-      .catch(err => {
-        res.status(400).send("Something went wrong, Please try again!");
-      })
-
+      carUpdate
+        .save()
+        .then(car => {
+          res.json("Success, Update complete!");
+        })
+        .catch(err => {
+          res.status(400).send("Something went wrong, Please try again!");
+        });
     }
   });
 };
