@@ -250,20 +250,20 @@ const sendNewSale = () => {
     data: {
       firstName: $("#firstName").val(),
       lastName: $("#lastName").val(),
-      email: $("#email").val()
-      // birthDate: $("#birth-date").val(),
-      // phone: $("#phone").val(),
-      // address: $("#address").val(),
-      // country: $("#country").val(),
-      // state: $("#state").val(),
-      // zip: $("#zip").val(),
-      // paymentMethod: "Dont't know how",
-      // nameOnCard: $("#cc-name").val(),
-      // cardNum: $("#cc-number").val(),
-      // expDate: $("#cc-expiration").val(),
-      // cvv: $("#cc-ccv").val(),
-      // carId: "carId",
-      // price: "don't know either"
+      email: $("#email").val(),
+      birthDate: $("#birth-date").val(),
+      phone: $("#phone").val(),
+      address: $("#address").val(),
+      country: $("#country").val(),
+      state: $("#state").val(),
+      zip: $("#zip").val(),
+      paymentMethod: "Dont't know how",
+      nameOnCard: $("#cc-name").val(),
+      cardNum: $("#cc-number").val(),
+      expDate: $("#cc-expiration").val(),
+      cvv: $("#cc-ccv").val(),
+      carId: "carId",
+      price: "don't know either"
     },
     success: onSuccess,
     error: onError
@@ -292,6 +292,4 @@ const validate = () => {
 $("#confirm").click(function() {
   event.preventDefault();
   validate();
-
 });
-
