@@ -35,6 +35,10 @@
   transition: transform 0.2s, opacity 0.5s;
   text-decoration: underline;
 }
+.arc-checkout {
+  font-family: "Major Mono Display", monospace;
+  font-size: 120px;
+}
 
 .navbar-item {
   color: white;
@@ -95,5 +99,3 @@
 .dodge {
   font-family: "Permanent Marker", cursive;
 }
-
-
