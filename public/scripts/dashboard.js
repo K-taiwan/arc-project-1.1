@@ -1,7 +1,7 @@
 onSuccess = response => {
   console.log("success!");
 
-  response.data.forEach(newSale => {
+  response.data.forEach((newSale, cars) => {
     const template = `
       <tr>
       <button>Delete</button>
@@ -19,8 +19,8 @@ onSuccess = response => {
       <td>${newSale.cardNum}</td>
       <td>${newSale.expDate}</td>
       <td>${newSale.cvv}</td>
-      <td>${newSale.carId}</td>
-      <td>${newSale.price}</td>
+      <td>${cars.carId}</td>
+      <td>${cars.price}</td>
       </tr>
       `;
     $("tbody").append(template);
