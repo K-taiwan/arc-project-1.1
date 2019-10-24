@@ -1,5 +1,5 @@
 // const carSection = document.querySelector
-console.log("çonnected!");
+// console.log("connected!");
 
 const $carGallery = $("#carGallery");
 
@@ -53,7 +53,6 @@ const getGallerySuccess = cars => {
   <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery/${cars._id}?id=${cars._id}">Purchase</a></button>
 </div> */
 
-
 //   const onSuccess = (gif)=>{
 //     console.log(gif);
 //     $('.gif-gallery').empty();
@@ -87,7 +86,7 @@ const onError = response => {
 const getGallery = () => {
   $.ajax({
     method: "GET",
-    url: "http://localhost:4000/api/v1/cars",
+    url: `http://localhost:4000/api/v1/cars/`,
     success: getGallerySuccess,
     error: onError
   });

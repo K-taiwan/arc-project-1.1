@@ -44,3 +44,7 @@
 .navbar-item:hover {
   color: white;
 }
+
+.car-img {
+  height: 250px;
+}
