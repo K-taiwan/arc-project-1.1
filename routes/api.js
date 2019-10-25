@@ -1,16 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const ctrl = require('../controllers')
-// const bodyParser = require("body-parser");
-// internal modules
-// const db = require("./models");
-// const routes = require("./routes");
-// instanced module
-
-
-// app.get("/api/v1/sales", (req, res) => {
-//   res.status(200).json({ success: true, msg: "Show all sales" });
-// });
 
 // ROUTE = /api/v1
 

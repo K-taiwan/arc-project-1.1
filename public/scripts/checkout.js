@@ -1,5 +1,4 @@
 console.log("Javascript connected...");
-// INITIAL DATA
 
 const carId = new URL(location.href).searchParams.get("id");
 
@@ -51,11 +50,9 @@ let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // APPEDN CHOSEN CAR------------------------------------------------------------------------
 let $chosenCar = $("#chosenCar");
-// console.log(cars.data._id)
 console.log(`Car Id is ${carId}`);
 const appendChosenCar = car => {
   price = car.data.price;
-  // console.log(car);
   const template = `
     <div class="col-md-12">
       <div class="card mb-4 shadow-sm">
@@ -85,7 +82,6 @@ getGallery();
 $("#firstName").blur(function() {
   if ($("#firstName").val().length < 2) {
     $("#firstName").addClass("is-invalid");
-    // valid = false;
   } else {
     $("#firstName").removeClass("is-invalid");
   }
@@ -116,7 +112,6 @@ $("#firstName").blur(function() {
 $("#lastName").blur(function() {
   if ($("#lastName").val().length < 2) {
     $("#lastName").addClass("is-invalid");
-    // valid = false;
   } else {
     $("#lastName").removeClass("is-invalid");
   }
@@ -146,7 +141,6 @@ $("#lastName").blur(function() {
 $("#birth-date").blur(function() {
   if ($("#birth-date").val().length < 1) {
     $("#birth-date").addClass("is-invalid");
-    // valid = false;
   } else {
     $("#birth-date").removeClass("is-invalid");
   }
@@ -173,7 +167,6 @@ $("#email").blur(function() {
 $("#phone").blur(function() {
   if ($("#phone").val().length < 2) {
     $("#phone").addClass("is-invalid");
-    // valid = false;
   } else {
     $("#phone").removeClass("is-invalid");
   }
@@ -183,7 +176,6 @@ $("#phone").blur(function() {
 $("#cc-name").blur(function() {
   if ($("#cc-name").val().length < 2) {
     $("#cc-name").addClass("is-invalid");
-    // valid = false;
   } else {
     $("#cc-name").removeClass("is-invalid");
   }
@@ -214,7 +206,6 @@ $("#cc-name").blur(function() {
 $("#cc-number").blur(function() {
   if ($("#cc-number").val().length < 10) {
     $("#cc-number").addClass("is-invalid");
-    // valid = false;
     return;
   } else {
     $("#cc-number").removeClass("is-invalid");
@@ -235,7 +226,6 @@ $("#cc-number").blur(function() {
 $("#cc-expiration").blur(function() {
   if ($("#cc-expiration").val().length != 4) {
     $("#cc-expiration").addClass("is-invalid");
-    // valid = false;
     return;
   } else {
     $("#cc-expiration").removeClass("is-invalid");
@@ -246,22 +236,10 @@ $("#cc-expiration").blur(function() {
 $("#cc-cvv").blur(function() {
   if ($("#cc-cvv").val().length < 3 || $("#cc-cvv").val().length > 3) {
     $("#cc-cvv").addClass("is-invalid");
-    // valid = false;
     return;
   } else {
     $("#cc-cvv").removeClass("is-invalid");
   }
-
-  // for (let i = 0; i < alphabet.length; i++) {
-  //   if (
-  //     $("#cc-cvv")
-  //       .val()
-  //       .includes(alphabet[i]) === true
-  //   ) {
-  //     $("#cc-cvv").addClass("is-invalid");
-  //     valid = true;
-  //   }
-  // }
 
   for (let i = 0; i < iChars.length; i++) {
     if (
@@ -276,16 +254,10 @@ $("#cc-cvv").blur(function() {
 
 const onSuccess = () => {
   console.log("success");
-  //   onSuccess load to success page (did on authAndSendNewSaleFunction)
 };
-
-// const onError = () => {
-//   console.log("error");
-// };
 
 const sendNewSale = () => {
   event.preventDefault();
-  // console.log($("#cc-cvv").val());
   $.ajax({
     method: "POST",
     url: "http://localhost:4000/api/v1/sales",
@@ -331,16 +303,12 @@ const authAndSendNewSale = () => {
       valid.push(false);
       console.log(false);
     } else {
-      // console.log(true);
     }
-    // console.log(infoArr[i]);
 
     if (infoArr[i].hasClass("is-invalid") === true) {
       valid.push(false);
       console.log(false);
     } else {
-      // infoArr[i].removeClass("is-invalid");
-      // console.log(infoArr[i] + "success");
     }
   }
 
