@@ -298,6 +298,7 @@ const sendNewSale = () => {
       address: $("#address").val(),
       country: $("#country").val(),
       state: $("#state").val(),
+      zip: $("#zip").val(),
       nameOnCard: $("#cc-name").val(),
       cardNum: $("#cc-number").val(),
       expDate: $("#cc-expiration").val(),
