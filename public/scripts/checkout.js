@@ -2,7 +2,6 @@ console.log("Javascript connected...");
 // INITIAL DATA
 
 const carId = new URL(location.href).searchParams.get("id");
-// const carId = new URL(location.href).searchParams.get('car');
 
 let iChars = [
   "˜",
@@ -312,7 +311,7 @@ const sendNewSale = () => {
       expDate: $("#cc-expiration").val(),
       cvv: $("#cc-cvv").val(),
       carId: carId,
-      price: "don't know either"
+      price: 'stuck',
     },
     success: onSuccess,
     error: onError

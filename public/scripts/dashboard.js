@@ -1,7 +1,7 @@
 const onSuccess = response => {
   console.log("success!");
 
-  response.data.forEach((newSale) => {
+  response.data.forEach((newSale,Car) => {
     const template = `
       <tr id=${newSale._id}>
         <td>${newSale.firstName}</td>
@@ -18,7 +18,7 @@ const onSuccess = response => {
         <td>${newSale.expDate}</td>
         <td>${newSale.cvv}</td>
         <td>${newSale.carId}</td>
-        <td>${newSale.price}</td>
+        <td>$${newSale.price}</td>
         <td><input type="checkbox" class="checkbox" name="checkbox" ${
           newSale.paymentReceived === 'true' ? 'checked' : ''
         } /></td>
@@ -27,6 +27,8 @@ const onSuccess = response => {
       </tr>
       `;
     $("tbody").append(template);
+    console.log(`${newSale.price}`);
+
   });
 };
 
@@ -34,6 +36,8 @@ const onSuccess = response => {
 onError = () => {
   console.log("err");
 };
+
+
 
 $.ajax({
   method: "GET",
@@ -68,8 +72,9 @@ $('#table-body').on('click', '.update', (event) => {
   // console.log(id);
   // updateProfile(id, data);
   // $(event.target.parentNode.parentNode).replaceWith(a);
-
 });
+
+
 
 $('#table-body').on('click', '.delete', (event) => {
   console.log(event.target.parentNode.parentNode);
@@ -102,14 +107,3 @@ const deleteProfile = (id) => {
   })
 }
 
-
-
-// $(".squares").on("click",".square", (event) => {
-//   handlePoke(event);
-// });
-
-// const confirmPaid =  event => {
-//   if(event.target.classList.contains("poked") === false){
-//     $(event.target).addClass("poked").css("opacity",.3);
-//   }
-// };
