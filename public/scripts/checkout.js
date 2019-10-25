@@ -2,7 +2,6 @@ console.log("Javascript connected...");
 // INITIAL DATA
 
 const carId = new URL(location.href).searchParams.get("id");
-// const carId = new URL(location.href).searchParams.get('car');
 
 let price = 0;
 
@@ -299,6 +298,7 @@ const sendNewSale = () => {
       address: $("#address").val(),
       country: $("#country").val(),
       state: $("#state").val(),
+      zip: $("#zip").val(),
       nameOnCard: $("#cc-name").val(),
       cardNum: $("#cc-number").val(),
       expDate: $("#cc-expiration").val(),

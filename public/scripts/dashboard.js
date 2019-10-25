@@ -1,7 +1,8 @@
 const onSuccess = response => {
   console.log("success!");
 
-  response.data.forEach(newSale => {
+  response.data.forEach((newSale,Car) => {
+
     const template = `
       <tr id=${newSale._id}>
         <td>${newSale.firstName}</td>
@@ -18,7 +19,7 @@ const onSuccess = response => {
         <td>${newSale.expDate}</td>
         <td>${newSale.cvv}</td>
         <td>${newSale.carId}</td>
-        <td>${newSale.price}</td>
+        <td>$${newSale.price}</td>
         <td><input type="checkbox" class="checkbox" name="checkbox" ${
           newSale.paymentReceived === "true" ? "checked" : ""
         } /></td>
@@ -27,12 +28,16 @@ const onSuccess = response => {
       </tr>
       `;
     $("tbody").append(template);
+    console.log(`${newSale.price}`);
+
   });
 };
 
 onError = () => {
   console.log("err");
 };
+
+
 
 $.ajax({
   method: "GET",
@@ -76,7 +81,10 @@ $("#table-body").on("click", ".update", event => {
   // $(event.target.parentNode.parentNode).replaceWith(a);
 });
 
-$("#table-body").on("click", ".delete", event => {
+
+
+$('#table-body').on('click', '.delete', (event) => {
+
   console.log(event.target.parentNode.parentNode);
   // console.log(event.currentTarget.parentElement.parentElement);
   const id = event.target.parentNode.parentNode.id;
@@ -131,3 +139,4 @@ $("#goToGallery").click(function() {
 //     $(event.target).addClass("poked").css("opacity",.3);
 //   }
 // };
+
