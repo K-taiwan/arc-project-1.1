@@ -65,7 +65,7 @@ const appendChosenCar = car => {
           <p class="card-text"><strong>Description</strong>: ${car.data.description}</p>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="http://localhost:4000/gallery">Change Vehicle</a></button>
+              <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/gallery">Change Vehicle</a></button>
             </div>
             <small class="text-muted">Added ${car.data.date}</small>
           </div>
@@ -260,7 +260,7 @@ const sendNewSale = () => {
   event.preventDefault();
   $.ajax({
     method: "POST",
-    url: "http://localhost:4000/api/v1/sales",
+    url: "/api/v1/sales",
     data: {
       firstName: $("#firstName").val(),
       lastName: $("#lastName").val(),

@@ -41,7 +41,7 @@ onError = () => {
 
 $.ajax({
   method: "GET",
-  url: "http://localhost:4000/api/v1/sales",
+  url: "`/api/v1/sales",
   success: onSuccess,
   error: onError
 });

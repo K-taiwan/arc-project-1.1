@@ -34,7 +34,7 @@ const onError = response => {
 const getGallery = () => {
   $.ajax({
     method: "GET",
-    url: `http://localhost:4000/api/v1/cars/`,
+    url: `/api/v1/cars/`,
     success: getGallerySuccess,
     error: onError
   });
