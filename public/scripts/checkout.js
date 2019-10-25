@@ -2,7 +2,6 @@ console.log("Javascript connected...");
 // INITIAL DATA
 
 const carId = new URL(location.href).searchParams.get("id");
-// const carId = new URL(location.href).searchParams.get('car');
 
 let price = 0;
 
@@ -277,7 +276,7 @@ $("#cc-cvv").blur(function() {
 
 const onSuccess = () => {
   console.log("success");
-  //   onSuccess load to success page
+  //   onSuccess load to success page (did on authAndSendNewSaleFunction)
 };
 
 // const onError = () => {
@@ -318,7 +317,6 @@ const infoArr = [
   $("#email"),
   $("#birth-date"),
   $("#phone"),
-  $("#zip"),
   $("#cc-name"),
   $("#cc-number"),
   $("#cc-expiration"),
@@ -326,19 +324,28 @@ const infoArr = [
 ];
 
 const authAndSendNewSale = () => {
-  let valid = true;
+  let valid = [];
   for (i = 0; i < infoArr.length; i++) {
-    if (infoArr[i].hasClass("is-invalid") == true || infoArr[i].val() == "") {
+    if (infoArr[i].val() == "") {
       infoArr[i].addClass("is-invalid");
-      valid = false;
+      valid.push(false);
+      console.log(false);
     } else {
-      console.log(infoArr[i] + "success");
-      console.log(valid);
-      // sendNewSale();
+      // console.log(true);
     }
-    console.log(infoArr[i]);
+    // console.log(infoArr[i]);
+
+    if (infoArr[i].hasClass("is-invalid") === true) {
+      valid.push(false);
+      console.log(false);
+    } else {
+      // infoArr[i].removeClass("is-invalid");
+      // console.log(infoArr[i] + "success");
+    }
   }
-  if (valid) {
+
+  if (valid.includes(false)) {
+  } else {
     sendNewSale();
     window.location.href = "/success";
   }
