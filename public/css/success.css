@@ -34,3 +34,18 @@
   text-decoration: underline;
   color: white;
 }
+
+footer {
+  padding: 20px 0;
+  font-size: 40px;
+}
+
+.arc-checkout {
+  font-family: "Major Mono Display", monospace;
+  font-size: 40px;
+}
+
+.arc-footer {
+  font-family: "Major Mono Display", monospace;
+  /* font-size: 40px; */
+}
