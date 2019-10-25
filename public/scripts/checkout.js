@@ -234,7 +234,7 @@ $("#cc-number").blur(function() {
 
 // EXPIRATION DATE------------------------------------------------------------------
 $("#cc-expiration").blur(function() {
-  if ($("#cc-expiration").val().length < 1) {
+  if ($("#cc-expiration").val().length != 4) {
     $("#cc-expiration").addClass("is-invalid");
     // valid = false;
     return;
