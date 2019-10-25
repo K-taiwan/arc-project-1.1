@@ -2,7 +2,6 @@ console.log("Javascript connected...");
 // INITIAL DATA
 
 const carId = new URL(location.href).searchParams.get("id");
-// const carId = new URL(location.href).searchParams.get('car');
 
 let price = 0;
 
