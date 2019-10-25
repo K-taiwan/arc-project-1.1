@@ -47,7 +47,7 @@ const create = (req, res) => {
 const destroy = (req, res) => {
   db.Sales.findByIdAndDelete(req.params.id, (err, deletedSale) => {
     if (err)
-      res
+      return res
         .status(500)
         .json({ status: 500, error: "Something went wrong please try again" });
 
@@ -55,10 +55,21 @@ const destroy = (req, res) => {
   });
 };
 
+const update = (req, res) => {
+  db.Sales.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateSales) => {
+    if(err)
+      return res 
+        .status(500)
+        .json({ status: 500, error: "Something went wrong please try again!" });
+      res.status(200).json({ status: 200, data: updateSales});
+  })
+};
+
 
 module.exports = {
   index,
   show,
   create,
-  destroy
+  destroy,
+  update,
 };

@@ -38,6 +38,9 @@ router.post('/sales', ctrl.sales.create);
 // GET Cars by id
 router.get('/sales/:id', ctrl.sales.show);
 
+// Update Car by id
+router.put('/sales/:id', ctrl.sales.update);
+
 // GET All cars
 router.get('/sales', ctrl.sales.index);
 
