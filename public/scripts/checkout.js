@@ -3,6 +3,21 @@ console.log("Javascript connected...");
 
 const carId = new URL(location.href).searchParams.get("id");
 
+let price = 0;
+
+const onError = response => {
+  console.log(response);
+};
+
+const getGallery = () => {
+  $.ajax({
+    method: "GET",
+    url: `/api/v1/cars/${carId}`,
+    success: appendChosenCar,
+    error: onError
+  });
+};
+
 let iChars = [
   "˜",
   "`",
@@ -37,9 +52,10 @@ let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 // APPEDN CHOSEN CAR------------------------------------------------------------------------
 let $chosenCar = $("#chosenCar");
 // console.log(cars.data._id)
-console.log(carId);
+console.log(`Car Id is ${carId}`);
 const appendChosenCar = car => {
-  console.log(car);
+  price = car.data.price;
+  // console.log(car);
   const template = `
     <div class="col-md-12">
       <div class="card mb-4 shadow-sm">
@@ -61,19 +77,6 @@ const appendChosenCar = car => {
     </div>
   `;
   $chosenCar.append(template);
-};
-
-const onError = response => {
-  console.log(response);
-};
-
-const getGallery = () => {
-  $.ajax({
-    method: "GET",
-    url: `/api/v1/cars/${carId}`,
-    success: appendChosenCar,
-    error: onError
-  });
 };
 
 getGallery();
@@ -154,15 +157,7 @@ $("#email").blur(function() {
   if (
     $("#email")
       .val()
-      .includes("@") === false
-  ) {
-    $("#email").addClass("is-invalid");
-    valid = false;
-  } else {
-    $("#email").removeClass("is-invalid");
-  }
-
-  if (
+      .includes("@") === false ||
     $("#email")
       .val()
       .includes(".") === false
@@ -238,7 +233,7 @@ $("#cc-number").blur(function() {
 
 // EXPIRATION DATE------------------------------------------------------------------
 $("#cc-expiration").blur(function() {
-  if ($("#cc-expiration").val().length < 1) {
+  if ($("#cc-expiration").val().length != 4) {
     $("#cc-expiration").addClass("is-invalid");
     // valid = false;
     return;
@@ -304,40 +299,51 @@ const sendNewSale = () => {
       country: $("#country").val(),
       state: $("#state").val(),
       zip: $("#zip").val(),
-
-      paymentMethod: "Dont't know how",
       nameOnCard: $("#cc-name").val(),
       cardNum: $("#cc-number").val(),
       expDate: $("#cc-expiration").val(),
       cvv: $("#cc-cvv").val(),
       carId: carId,
-      price: 'stuck',
+      price: price
     },
     success: onSuccess,
     error: onError
   });
 };
 
-const validate = () => {
-  console.log($("#firstName").val());
-  sendNewSale();
+const infoArr = [
+  $("#firstName"),
+  $("#lastName"),
+  $("#email"),
+  $("#birth-date"),
+  $("#phone"),
+  $("#zip"),
+  $("#cc-name"),
+  $("#cc-number"),
+  $("#cc-expiration"),
+  $("#cc-cvv")
+];
+
+const authAndSendNewSale = () => {
+  let valid = true;
+  for (i = 0; i < infoArr.length; i++) {
+    if (infoArr[i].hasClass("is-invalid") == true || infoArr[i].val() == "") {
+      infoArr[i].addClass("is-invalid");
+      valid = false;
+    } else {
+      console.log(infoArr[i] + "success");
+      console.log(valid);
+      // sendNewSale();
+    }
+    console.log(infoArr[i]);
+  }
+  if (valid) {
+    sendNewSale();
+    window.location.href = "/success";
+  }
 };
-
-// $("#confirm").on("click", () => {
-//   event.preventDefault();
-//   console.log("clicked");
-//   if ($(".form-control").hasClass("is-invalid") == false) {
-//   }
-//   else {sendNewSale()}
-// });
-
-// $("#confirm").on("click", () => {
-//   event.preventDefault();
-//   console.log("clicked");
-//   sendNewSale();
-// });
 
 $("#confirm").click(function() {
   event.preventDefault();
-  validate();
+  authAndSendNewSale();
 });
