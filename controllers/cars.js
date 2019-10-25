@@ -12,18 +12,6 @@ const create = (req, res) => {
   });
 };
 
-// const update = (req, res) => {
-//   db.Car.put(req.params.id, (err, updatedCar) => {
-//     if (err) return console.log(err);
-//     res.json({
-//       status: 201,
-//       message: "Update car",
-//       requestedAt: new Date().toLocaleString(),
-//       data: updatedCar
-//     });
-//   });
-// };
-
 const update = (req, res) => {
   db.Car.findById(req.params.id, function(err, carUpdate) {
     if (!carUpdate)

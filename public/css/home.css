@@ -1,9 +1,6 @@
 .first-section {
   background-image: url("http://hdqwalls.com/wallpapers/long-alone-dark-road-sunset-view-z7.jpg");
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* opacity: 0.8; */
-  /* background-position: center; */
   min-height: 30em;
   color: white;
   width: 100%;
@@ -76,7 +73,6 @@
 
 .car-slogan {
   color: rgb(226, 210, 180);
-  /* font-family: "Satisfy", cursive; */
 }
 
 .car-image {
