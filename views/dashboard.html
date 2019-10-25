@@ -59,15 +59,23 @@
           <main role="main" class="col-md-5 ml-sm-auto col-lg-10 px-4">
               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                  <div class="btn-group mr-2">
+                <div class="btn-toolbar mr-2 mb-2 mb-md-0">
+                    <div class="btn" role="alert">
+                        <button type="button" id="goToHome" class="btn btn-sm btn-outline-info">
+                          Home
+                        </button>
+                        <button type="button" id="goToGallery" class="btn btn-sm btn-outline-info">
+                          Gallery
+                        </button>
+                      </div>
+                  <!-- <div class=" ">
                     <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
                   </div>
                   <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                     <span data-feather="calendar"></span>
                     This week
-                  </button>
+                  </button> -->
                 </div>
               </div>
 
@@ -100,6 +108,7 @@
                   </tbody>
                 </table>
               </div>
+
               <footer class="my-5 pt-5 text-muted text-center text-small">
                   <p class="mb-1">© 2019 <span class="arc-checkout">ARC</span></p>
                   <span class ="icon"><i class="fab fa-facebook-square"></i></span>
