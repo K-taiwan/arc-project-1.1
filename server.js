@@ -4,6 +4,8 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 const db = require("./models");
 
+require('dotenv').config();
+
 // Routes
 const routes = require("./routes");
 
