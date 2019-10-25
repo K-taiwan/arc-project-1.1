@@ -36,6 +36,16 @@
   text-decoration: underline;
 }
 
+.arc-checkout {
+  font-family: "Major Mono Display", monospace;
+  font-size: 120px;
+}
+
+.arc-footer {
+  font-family: "Major Mono Display", monospace;
+  font-size: 60px;
+}
+
 .navbar-item {
   color: white;
   text-decoration: none;
@@ -95,5 +105,7 @@
 .dodge {
   font-family: "Permanent Marker", cursive;
 }
-
-
+footer {
+  padding: 20px 0;
+  font-size: 40px;
+}

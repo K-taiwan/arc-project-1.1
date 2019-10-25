@@ -68,3 +68,13 @@
 .dodge {
   font-family: "Permanent Marker", cursive;
 }
+
+.arc-footer {
+  font-family: "Major Mono Display", monospace;
+  font-size: 50px;
+}
+
+footer {
+  padding: 20px 0;
+  font-size: 40px;
+}

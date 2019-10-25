@@ -68,7 +68,8 @@ const saleSchema = new Schema({
   price: {
     type: String,
     // required: true
-  }
+  },
+  paymentReceived: String,
 });
 
 const newSale = mongoose.model("Sales", saleSchema);

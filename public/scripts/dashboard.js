@@ -1,27 +1,29 @@
-onSuccess = response => {
+const onSuccess = response => {
   console.log("success!");
 
   response.data.forEach((newSale) => {
     const template = `
       <tr id=${newSale._id}>
-      <td>${newSale.firstName}</td>
-      <td>${newSale.lastName}</td>
-      <td>${newSale.email}</td>
-      <td>${newSale.birthDate}</td>
-      <td>${newSale.phone}</td>
-      <td>${newSale.address}</td>
-      <td>${newSale.country}</td>
-      <td>${newSale.state}</td>
-      <td>${newSale.zip}</td>
-      <td>${newSale.nameOnCard}</td>
-      <td>${newSale.cardNum}</td>
-      <td>${newSale.expDate}</td>
-      <td>${newSale.cvv}</td>
-      <td>${newSale.carId}</td>
-      <td>${newSale.price}</td>
-      <td><input type="checkbox" id="checkbox" name="checkbox" value="true"></td>
-      <td><button class="update">Update</button></td>
-      <td><button class="delete">Delete</button></td>
+        <td>${newSale.firstName}</td>
+        <td>${newSale.lastName}</td>
+        <td>${newSale.email}</td>
+        <td>${newSale.birthDate}</td>
+        <td>${newSale.phone}</td>
+        <td>${newSale.address}</td>
+        <td>${newSale.country}</td>
+        <td>${newSale.state}</td>
+        <td>${newSale.zip}</td>
+        <td>${newSale.nameOnCard}</td>
+        <td>${newSale.cardNum}</td>
+        <td>${newSale.expDate}</td>
+        <td>${newSale.cvv}</td>
+        <td>${newSale.carId}</td>
+        <td>${newSale.price}</td>
+        <td><input type="checkbox" class="checkbox" name="checkbox" ${
+          newSale.paymentReceived === 'true' ? 'checked' : ''
+        } /></td>
+        <td><button class="update">Update</button></td>
+        <td><button class="delete">Delete</button></td>
       </tr>
       `;
     $("tbody").append(template);
@@ -40,14 +42,26 @@ $.ajax({
   error: onError
 });
 
-$("button").click(function() {
+$("button").on('click', function() {
   event.preventDefault();
 });
 
 $('#table-body').on('click', '.update', (event) => {
+  console.log('UPDATE CLICK');
+  const saleId = $(event.target).parent().parent().attr('id');
+  const paymentReceivedValue = $(event.target).parent().siblings().find('.checkbox').prop('checked');
+  console.log(paymentReceivedValue);
+
+  $.ajax({
+    url: `/api/v1/sales/${saleId}`,
+    method: 'PUT',
+    data: {paymentReceived: paymentReceivedValue},
+    success: (res) => console.log(res),
+    err: (err) => console.log(err),
+  });
   // console.log(event.target.parentNode.parentNode);
   // const id = event.target.parentNode;
-  $(event.target.parentNode).replaceWith(`<p>Replaced</p>`)
+  // $(event.target.parentNode).replaceWith(`<p class="endgame">Replaced</p>`)
   
   // const id = event.target.parentNode.parentNode.id;
   // const data = event.target.parentNode.parentNode.data;

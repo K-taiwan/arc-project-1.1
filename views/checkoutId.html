@@ -10,7 +10,12 @@
       rel="stylesheet"
     />
     <!-----FONT AWESOME-------->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
     <!-- JQUERY -->
     <script
       defer
@@ -24,6 +29,7 @@
     <script src="../scripts/checkout.js" defer></script>
     <!-- BOOTSTRAP -->
     <link
+      defer
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -253,6 +259,7 @@
             <div class="row">
               <div class="col-md-5 mb-3">
                 <label for="country">Country</label>
+                <span class="text-muted">(Optional)</span>
                 <select
                   class="custom-select d-block w-100"
                   id="country"
@@ -264,6 +271,7 @@
               </div>
               <div class="col-md-4 mb-3">
                 <label for="state">State</label>
+                <span class="text-muted">(Optional)</span>
                 <select
                   class="custom-select d-block w-100"
                   id="state"
@@ -276,58 +284,13 @@
               <div class="col-md-3 mb-3">
                 <label for="zip">Zip</label
                 ><span class="text-muted">(Optional)</span>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="zip"
-                  placeholder=""
-                  required=""
-                />
+                <input type="text" id="zip" placeholder="" required="" />
               </div>
             </div>
             <hr class="mb-4" />
 
-            <h4 class="your-checkout text-muted mb-3">Payment Method</h4>
+            <h4 class="your-checkout text-muted mb-3">Card Info</h4>
 
-            <div class="d-block my-3">
-              <div class="custom-control custom-radio">
-                <input
-                  id="credit"
-                  name="credit"
-                  type="radio"
-                  class="custom-control-input"
-                  value="radio1"
-                  required=""
-                />
-                <label class="custom-control-label" for="credit"
-                  >Credit card</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  id="debit"
-                  name="debit"
-                  type="radio"
-                  class="custom-control-input"
-                  value="radio2"
-                  required=""
-                />
-                <label class="custom-control-label" for="debit"
-                  >Debit card</label
-                >
-              </div>
-              <div class="custom-control custom-radio">
-                <input
-                  id="paypal"
-                  name="paypal"
-                  type="radio"
-                  class="custom-control-input"
-                  value="radio3"
-                  required=""
-                />
-                <label class="custom-control-label" for="paypal">PayPal</label>
-              </div>
-            </div>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="cc-name">Name on card</label>
@@ -358,10 +321,10 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-3">
                 <label for="cc-expiration">Expiration Date</label>
                 <input
-                  type="date"
+                  type="number"
                   class="form-control"
                   id="cc-expiration"
                   placeholder="MMYY"
@@ -399,16 +362,15 @@
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">© 2019 <span class="arc-checkout">ARC</span></p>
-        <span class ="icon"><i class="fab fa-facebook-square"></i></span>
+        <span class="icon"><i class="fab fa-facebook-square"></i></span>
         <span class="icon"><i class="fab fa-twitter-square"></i></span>
         <span class="icon"><i class="fab fa-instagram"></i></span>
 
-        <ul class="list-inline">
+        <!-- <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
           <li class="list-inline-item"><a href="#">Support</a></li>
-
-        </ul>
+        </ul> -->
       </footer>
     </div>
   </body>
