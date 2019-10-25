@@ -2,6 +2,7 @@ const onSuccess = response => {
   console.log("success!");
 
   response.data.forEach((newSale,Car) => {
+
     const template = `
       <tr id=${newSale._id}>
         <td>${newSale.firstName}</td>
@@ -20,7 +21,7 @@ const onSuccess = response => {
         <td>${newSale.carId}</td>
         <td>$${newSale.price}</td>
         <td><input type="checkbox" class="checkbox" name="checkbox" ${
-          newSale.paymentReceived === 'true' ? 'checked' : ''
+          newSale.paymentReceived === "true" ? "checked" : ""
         } /></td>
         <td><button class="update">Update</button></td>
         <td><button class="delete">Delete</button></td>
@@ -31,7 +32,6 @@ const onSuccess = response => {
 
   });
 };
-
 
 onError = () => {
   console.log("err");
@@ -46,34 +46,45 @@ $.ajax({
   error: onError
 });
 
-$("button").on('click', function() {
+$("button").on("click", function() {
   event.preventDefault();
 });
 
-$('#table-body').on('click', '.update', (event) => {
-  console.log('UPDATE CLICK');
-  const saleId = $(event.target).parent().parent().attr('id');
-  const paymentReceivedValue = $(event.target).parent().siblings().find('.checkbox').prop('checked');
+$("#table-body").on("click", ".update", event => {
+  console.log("UPDATE CLICK");
+  const saleId = $(event.target)
+    .parent()
+    .parent()
+    .attr("id");
+  const paymentReceivedValue = $(event.target)
+    .parent()
+    .siblings()
+    .find(".checkbox")
+    .prop("checked");
   console.log(paymentReceivedValue);
 
   $.ajax({
     url: `/api/v1/sales/${saleId}`,
-    method: 'PUT',
-    data: {paymentReceived: paymentReceivedValue},
-    success: (res) => console.log(res),
-    err: (err) => console.log(err),
+    method: "PUT",
+    data: { paymentReceived: paymentReceivedValue },
+    success: res => console.log(res),
+    err: err => console.log(err)
   });
+
+
 });
 
 
 
 $('#table-body').on('click', '.delete', (event) => {
+
   console.log(event.target.parentNode.parentNode);
   const id = event.target.parentNode.parentNode.id;
   console.log(id);
   deleteProfile(id);
   $(event.target.parentNode.parentNode).empty();
-  
+
+
 });
 
 const updateProfile = (id, data) => {
@@ -81,18 +92,43 @@ const updateProfile = (id, data) => {
     method: "PUT",
     url: `/api/v1/sales/${id}`,
     data: data,
-    success: (res)=>{console.log(res)},
-    error: (err)=>{console.log(err)},
-  })
-}
+    success: res => {
+      console.log(res);
+    },
+    error: err => {
+      console.log(err);
+    }
+  });
+};
 
-
-const deleteProfile = (id) => {
+const deleteProfile = id => {
   $.ajax({
     method: "DELETE",
     url: `/api/v1/sales/${id}`,
-    success: (res)=>{console.log(res)},
-    error: (err)=>{console.log(err)},
-  })
-}
+    success: res => {
+      console.log(res);
+    },
+    error: err => {
+      console.log(err);
+    }
+  });
+};
+
+$("#goToHome").click(function() {
+  window.location.href = "/";
+});
+
+$("#goToGallery").click(function() {
+  window.location.href = "/gallery";
+});
+
+// $(".squares").on("click",".square", (event) => {
+//   handlePoke(event);
+// });
+
+// const confirmPaid =  event => {
+//   if(event.target.classList.contains("poked") === false){
+//     $(event.target).addClass("poked").css("opacity",.3);
+//   }
+// };
 
