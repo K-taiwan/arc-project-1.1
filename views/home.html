@@ -1,314 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- GOOGLE FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display|Permanent+Marker|Satisfy|Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS File -->
-    <link rel="stylesheet" href="/css/home.css" />
-    <!-----FONT AWESOME-------->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <!-- JS File -->
-    <script src="/scripts/app.js" defer></script>
-    <!-- BOOTSTRAP -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <title>ARC Home</title>
-  </head>
-  <body>
-    <header>
-      <div class="bg-dark collapse" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">
-                The whole concept of this app it to ingeniously link people that
-                need to rent a vehicle prefereably(convertible) cruising
-                vehicles, but we also cater to the ones that need fuel
-                consumption, minivan, trucks. We cater to everyone, no need for
-                any type of discrimination as long as we get paid. No need to
-                signup or login. Just book the vehicle you want and pay up
-                front. We will handle the rest. User friendly and simple logic
-                of 1 day rent vehicle of 24hr's.
-              </p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Partners</h4>
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.mbusa.com/en/home"
-                    class="text-white"
-                    >Mercedes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.bmw.com/en/index.html"
-                    class="text-white"
-                    >BMW</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.dodge.com/"
-                    class="text-white"
-                    >Dodge</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.ford.com/cars/mustang/"
-                    class="text-white"
-                    >Ford Mustang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.porsche.com/usa/"
-                    class="text-white"
-                    >Porsche</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-one navbar-dark">
-        <a
-          href="/"
-          class="navbar-brand d-flex align-items-center"
-          ><strong class="arc">ARC</strong></a
-        >
-        <div class="container-two">
-          <a
-            class="navbar-item  d-flex align-items-center"
-            href="/gallery"
-            >Gallery</a
-          >
-          <a
-            class="navbar-item  d-flex align-items-center"
-            href="/dashboard"
-            >Admin</a
-          >
-        </div>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarHeader"
-          aria-controls="navbarHeader"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </header>
-    <main>
-      <div class="first-section position-relative overflow-hidden text-center">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <div class="display-4 font-weight-normal">
-            <h1 class="arc-checkout">ARC</h1>
-            <h2>The best. Ever.</h2>
-          </div>
-          <p class="slogan lead font-weight-normal">
-            You are renting with us again
-          </p>
-          <a class="btn btn-secondary" href="/gallery"
-            >Go to gallery</a
-          >
-        </div>
-      </div>
-      <!-- <hr class="featurette-divider" /> -->
-      <div class="featurette">
-        <div class="col-md-7 order-md-2">
-          <div class="featurette-heading">
-            <h1 class="mustang">Mercedes</h1>
-            <h2><span class="car-slogan">Beast Amongst Beast's</span></h2>
-          </div>
-          <!-- https://www.mbofmassapequa.com/difference-between-mercedes-benz-amg/ -->
-          <p class="lead">
-            AMG® is short for Aufecht, Melcher, and Großaspach, the division of
-            Mercedes-Benz that produces performance vehicles. Named after some
-            of the most important engineers in the company’s history, this
-            division creates vehicles with advanced engines, aerodynamic bodies,
-            and high-speed capabilities. Most of the vehicles it produces are
-            similar to standard Mercedes-Benz models, but have higher
-            capabilities.
-          </p>
-        </div>
-        <div class="col-md-5 ">
-          <a href="/gallery">
-            <img
-              class="car-image"
-              src="https://www.wallpaperup.com/uploads/wallpapers/2013/10/12/159135/efbf829ed2bb86fe9fa9cc861a7559a5-1400.jpg"
-              alt="Mercedes"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="featurette">
-        <div class="col-md-7">
-          <div class="featurette-heading">
-            <h1 class="porsche">Porsche</h1>
-            <h2><span class="car-slogan">Power, Beauty & Soul</span></h2>
-          </div>
-          <!-- https://www.carfax.com/Research-Porsche_m28 -->
-          <p class="lead">
-            German automobile manufacturer Porsche is best known for its sports
-            cars, but it also builds performance sedans and SUVs. The brand is
-            now owned by Volkswagen AG and is recognized as one of the most
-            prestigious automobile brands in the world. Officially known as Dr.
-            Ing.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <a href="/gallery">
-            <img
-              class="car-image"
-              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-              alt="Porsche"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="featurette">
-        <div class="col-md-7 order-md-2">
-          <div class="featurette-heading">
-            <h1 class="mustang">Mustang</h1>
-            <h2><span class="car-slogan">Courage Changes Everything</span></h2>
-          </div>
-          <!-- https://www.quora.com/What-is-the-Ford-Motor-Company-known-for -->
-          <p class="lead">
-            Ford became famous because of its super selling car in early 1900s -
-            Model T. This car was market leader for roughly 20 years. Ford Motor
-            Company was started by a great man called Henry Ford. To produce
-            Model T at very large scale, he developed (adopted) Assembly Line
-            and , which revolutionised the manufacturing industry across the
-            world. Assembly line is one of the greatest contribution from Ford
-            to the world.
-          </p>
-        </div>
-        <div class="col-md-5 ">
-          <a href="/gallery">
-            <img
-              class="car-image"
-              src="https://i.pinimg.com/originals/ce/ba/90/ceba902606e7664b42493ffb64e83c05.png"
-              alt="Mustang"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="featurette">
-        <div class="col-md-7">
-          <div class="featurette-heading">
-            <h1 class="bmw">BMW</h1>
-            <h2>
-              <span class="car-slogan">Sheer Driving Pleasure</span>
-            </h2>
-          </div>
-          <!-- https://www.rewindandcapture.com/why-is-bmw-called-bmw/ -->
-          <p class="lead">
-            BMW is a German multinational company known for selling luxury
-            vehicles and motorcycles. As BMW itself put it, the BMW is “The
-            Ultimate Driving Machine.” Whether or not that’s entirely true, many
-            consumers seem to agree today – BMW’s 3 Series was the #2
-            best-selling luxury car in America in 2017. Their long history of
-            innovation, along with a great reputation for performance, safety,
-            and quality, have caused it to be one of the most successful and
-            recognizable international brands.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <a href="/gallery">
-            <img
-              class="car-image"
-              src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/all-models/2-series/gran-coupe/10_2019/bmw-f44-03-media-01-hd-d.jpg?imwidth=1920"
-              alt="BMW"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="featurette">
-        <div class="col-md-7 order-md-2">
-          <div class="featurette-heading">
-            <h1 class="dodge">Dodge</h1>
-            <h2><span class="car-slogan">Grab Life By The Horn's</span></h2>
-          </div>
-          <!-- https://mydriftfun.com/20-interesting-facts-dodge-motor-company/ -->
-          <p class="lead">
-            Well known for its reliability and a high quality of work, the Dodge
-            Brothers Company produced a wide range of automobile parts,
-            including power-plants, drivelines, precision engines and other
-            components. Industrialist Ransom Eli Olds, a pioneer of American
-            automobile industry and the founder of the Olds Motor Vehicle
-            Company, was one of the first customers of Dodge factory. The Olds
-            Motor Vehicle Co. of Lansing, Michigan, producer of the famous
-            Oldsmobile, used Dodge-made one-cylinder engines and a two-range
-            transmission. This partnership earned necessary finances and, more
-            importantly, a good reputation for the new company.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <a href="/gallery">
-            <img
-              class="car-image"
-              src="https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2019/challenger/gallery/exterior/2019-challenger-gallery-srt-hellcat-1.jpg.image.2880.jpg"
-              alt="Dodge"
-            />
-          </a>
-        </div>
-      </div>
-    </main>
 
-    <footer class="text-muted text-center">
-      <p class="mb-1">© 2019 <span class="arc-footer">ARC</span></p>
-      <span class="icon"><i class="fab fa-facebook-square"></i></span>
-      <span class="icon"><i class="fab fa-twitter-square"></i></span>
-      <span class="icon"><i class="fab fa-instagram"></i></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- GOOGLE FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Cutive+Mono|Major+Mono+Display|Permanent+Marker|Satisfy|Source+Code+Pro&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
+  <!-- CSS File -->
+  <link rel="stylesheet" href="/css/home.css" />
+  <!-----FONT AWESOME-------->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+  <!-- JS File -->
+  <script src="/scripts/app.js" defer></script>
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <title>ARC Home</title>
+</head>
+
+<body>
+  <header>
+    <div class="bg-dark collapse" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">
+              The whole concept of this app is to ingeniously link people that
+              need to rent a vehicle prefereably(convertible) cruising
+              vehicles, but we also cater to the ones that need fuel
+              consumption, minivan, trucks. We cater to everyone, no need for
+              any type of discrimination as long as we get paid. No need to
+              signup or login. Just book the vehicle you want and pay up
+              front. We will handle the rest. User friendly and simple logic
+              of 1 day rent vehicle of 24hr's.
+            </p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Partners</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a target="_blank" href="https://www.mbusa.com/en/home" class="text-white">Mercedes</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.bmw.com/en/index.html" class="text-white">BMW</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.dodge.com/" class="text-white">Dodge</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.ford.com/cars/mustang/" class="text-white">Ford Mustang</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.porsche.com/usa/" class="text-white">Porsche</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-one navbar-dark">
+      <a href="/" class="navbar-brand d-flex align-items-center"><strong class="arc">ARC</strong></a>
+      <div class="container-two">
+        <a class="navbar-item  d-flex align-items-center" href="/gallery">Gallery</a>
+        <a class="navbar-item  d-flex align-items-center" href="/dashboard">Admin</a>
+      </div>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="first-section position-relative overflow-hidden text-center">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <div class="display-4 font-weight-normal">
+          <h1 class="arc-checkout">ARC</h1>
+          <h2>The best. Ever.</h2>
+        </div>
+        <p class="slogan lead font-weight-normal">
+          You are renting with us again
+        </p>
+        <a class="btn btn-secondary" href="/gallery">Go to gallery</a>
+      </div>
+    </div>
+    <!-- <hr class="featurette-divider" /> -->
+    <div class="featurette">
+      <div class="col-md-7 order-md-2">
+        <div class="featurette-heading">
+          <h1 class="mustang">Mercedes</h1>
+          <h2><span class="car-slogan">Beast Amongst Beast's</span></h2>
+        </div>
+        <!-- https://www.mbofmassapequa.com/difference-between-mercedes-benz-amg/ -->
+        <p class="lead">
+          AMG® is short for Aufecht, Melcher, and Großaspach, the division of
+          Mercedes-Benz that produces performance vehicles. Named after some
+          of the most important engineers in the company’s history, this
+          division creates vehicles with advanced engines, aerodynamic bodies,
+          and high-speed capabilities. Most of the vehicles it produces are
+          similar to standard Mercedes-Benz models, but have higher
+          capabilities.
+        </p>
+      </div>
+      <div class="col-md-5 ">
+        <a href="/gallery">
+          <img class="car-image"
+            src="https://www.wallpaperup.com/uploads/wallpapers/2013/10/12/159135/efbf829ed2bb86fe9fa9cc861a7559a5-1400.jpg"
+            alt="Mercedes" />
+        </a>
+      </div>
+    </div>
+    <div class="featurette">
+      <div class="col-md-7">
+        <div class="featurette-heading">
+          <h1 class="porsche">Porsche</h1>
+          <h2><span class="car-slogan">Power, Beauty & Soul</span></h2>
+        </div>
+        <!-- https://www.carfax.com/Research-Porsche_m28 -->
+        <p class="lead">
+          German automobile manufacturer Porsche is best known for its sports
+          cars, but it also builds performance sedans and SUVs. The brand is
+          now owned by Volkswagen AG and is recognized as one of the most
+          prestigious automobile brands in the world. Officially known as Dr.
+          Ing.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <a href="/gallery">
+          <img class="car-image"
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+            alt="Porsche" />
+        </a>
+      </div>
+    </div>
+    <div class="featurette">
+      <div class="col-md-7 order-md-2">
+        <div class="featurette-heading">
+          <h1 class="mustang">Mustang</h1>
+          <h2><span class="car-slogan">Courage Changes Everything</span></h2>
+        </div>
+        <!-- https://www.quora.com/What-is-the-Ford-Motor-Company-known-for -->
+        <p class="lead">
+          Ford became famous because of its super selling car in early 1900s -
+          Model T. This car was market leader for roughly 20 years. Ford Motor
+          Company was started by a great man called Henry Ford. To produce
+          Model T at very large scale, he developed (adopted) Assembly Line
+          and , which revolutionised the manufacturing industry across the
+          world. Assembly line is one of the greatest contribution from Ford
+          to the world.
+        </p>
+      </div>
+      <div class="col-md-5 ">
+        <a href="/gallery">
+          <img class="car-image" src="https://i.pinimg.com/originals/ce/ba/90/ceba902606e7664b42493ffb64e83c05.png"
+            alt="Mustang" />
+        </a>
+      </div>
+    </div>
+    <div class="featurette">
+      <div class="col-md-7">
+        <div class="featurette-heading">
+          <h1 class="bmw">BMW</h1>
+          <h2>
+            <span class="car-slogan">Sheer Driving Pleasure</span>
+          </h2>
+        </div>
+        <!-- https://www.rewindandcapture.com/why-is-bmw-called-bmw/ -->
+        <p class="lead">
+          BMW is a German multinational company known for selling luxury
+          vehicles and motorcycles. As BMW itself put it, the BMW is “The
+          Ultimate Driving Machine.” Whether or not that’s entirely true, many
+          consumers seem to agree today – BMW’s 3 Series was the #2
+          best-selling luxury car in America in 2017. Their long history of
+          innovation, along with a great reputation for performance, safety,
+          and quality, have caused it to be one of the most successful and
+          recognizable international brands.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <a href="/gallery">
+          <img class="car-image"
+            src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/all-models/2-series/gran-coupe/10_2019/bmw-f44-03-media-01-hd-d.jpg?imwidth=1920"
+            alt="BMW" />
+        </a>
+      </div>
+    </div>
+    <div class="featurette">
+      <div class="col-md-7 order-md-2">
+        <div class="featurette-heading">
+          <h1 class="dodge">Dodge</h1>
+          <h2><span class="car-slogan">Grab Life By The Horn's</span></h2>
+        </div>
+        <!-- https://mydriftfun.com/20-interesting-facts-dodge-motor-company/ -->
+        <p class="lead">
+          Well known for its reliability and a high quality of work, the Dodge
+          Brothers Company produced a wide range of automobile parts,
+          including power-plants, drivelines, precision engines and other
+          components. Industrialist Ransom Eli Olds, a pioneer of American
+          automobile industry and the founder of the Olds Motor Vehicle
+          Company, was one of the first customers of Dodge factory. The Olds
+          Motor Vehicle Co. of Lansing, Michigan, producer of the famous
+          Oldsmobile, used Dodge-made one-cylinder engines and a two-range
+          transmission. This partnership earned necessary finances and, more
+          importantly, a good reputation for the new company.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <a href="/gallery">
+          <img class="car-image"
+            src="https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2019/challenger/gallery/exterior/2019-challenger-gallery-srt-hellcat-1.jpg.image.2880.jpg"
+            alt="Dodge" />
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-muted text-center">
+    <p class="mb-1">© 2019 <span class="arc-footer">ARC</span></p>
+    <span class="icon"><i class="fab fa-facebook-square"></i></span>
+    <span class="icon"><i class="fab fa-twitter-square"></i></span>
+    <span class="icon"><i class="fab fa-instagram"></i></span>
 
 
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>
