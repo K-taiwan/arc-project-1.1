@@ -1,11 +1,13 @@
+// External Module
 const express = require("express");
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 4000;
+// Instanced Module
 const app = express();
-
+// System Config
+const PORT = process.env.PORT;
 require('dotenv').config();
 
-// Routes
+// Internal Module
 const routes = require("./routes");
 
 // ------------------------------------------------- MIDDLEWARE ------------------------------------------------- //
