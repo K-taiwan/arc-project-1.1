@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 // Instanced Module
 const app = express();
 // System Config
-const PORT = process.env.PORT;
 require('dotenv').config();
+const PORT = process.env.PORT;
+
 
 // Internal Module
 const routes = require("./routes");

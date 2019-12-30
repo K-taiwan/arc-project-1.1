@@ -9,8 +9,10 @@ const carSchema = new Schema({
   image: String,
   convertible: Boolean,
   description: String,
-  date: String,
- 
+  date: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 const Car = mongoose.model('Car', carSchema);

@@ -302,8 +302,7 @@ const authAndSendNewSale = () => {
       infoArr[i].addClass("is-invalid");
       valid.push(false);
       console.log(false);
-    } else {
-    }
+    } 
 
     if (infoArr[i].hasClass("is-invalid") === true) {
       valid.push(false);

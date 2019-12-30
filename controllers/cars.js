@@ -1,8 +1,29 @@
 const db = require("../models");
 
+const checkInValid = data => {
+  const keys = ['model','brand']
+  const formKeys = Object.keys(data);
+  let missing = false;
+  formKeys.forEach(key => {
+    if(!keys.includes(key)){
+      missing=true;
+    }
+  })
+  return missing
+}
+
 const create = (req, res) => {
+  if(checkInValid(req.body)) return res.json({
+    status: 500,
+    message: "Something went wrong.",
+    requestedAt: new Date().toLocaleString(),
+  });
   db.Car.create(req.body, (err, createdNewCar) => {
-    if (err) return console.log(err);
+    if (err) return res.json({
+      status: 500,
+      message: "Something went wrong.",
+      requestedAt: new Date().toLocaleString(),
+    });
     res.json({
       status: 201,
       message: "Create new car",
@@ -13,7 +34,7 @@ const create = (req, res) => {
 };
 
 const update = (req, res) => {
-  db.Car.findById(req.params.id, function(err, carUpdate) {
+  db.Car.findById(req.params.id, (err, carUpdate) => {
     if (!carUpdate)
       res.status(404).send("Something went wrong, Please try again!");
     else {
@@ -43,7 +64,11 @@ const update = (req, res) => {
 const show = (req, res) => {
   console.log("Received request at Profile Route");
   db.Car.findById(req.params.id, (err, foundCar) => {
-    if (err) return res.status(500).json(err);
+    if (err) return res.json({
+      status: 500,
+      message: "Something went wrong.",
+      requestedAt: new Date().toLocaleString(),
+    });
     res.json({
       status: 200,
       data: foundCar
@@ -51,13 +76,17 @@ const show = (req, res) => {
   });
 };
 
-// Index Profiles
+// Index cars
 const index = (req, res) => {
   db.Car.find({}, (err, allCars) => {
-    if (err) return console.log(err);
-    res.json({
+    if (err) return res.json({
       status: 500,
-      msg: "Show all Cars",
+      message: "Something went wrong.",
+      requestedAt: new Date().toLocaleString(),
+    });
+    res.json({
+      status: 200,
+      // msg: "Show all Cars",
       requestedAt: new Date().toLocaleString(),
       count: allCars.length,
       data: allCars
@@ -68,9 +97,11 @@ const index = (req, res) => {
 const destroy = (req, res) => {
   db.Car.findByIdAndDelete(req.params.id, (err, deletedCar) => {
     if (err)
-      res
-        .status(500)
-        .json({ status: 500, error: "Something went wrong please try again" });
+    res.status(500).json({
+      status: 500,
+      message: "Something went wrong.",
+      requestedAt: new Date().toLocaleString(),
+    });
 
     res.status(200).json({ status: 200, data: deletedCar });
   });
